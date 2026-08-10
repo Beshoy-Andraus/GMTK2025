@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://dkwl7l8ge346l"]
+
+[ext_resource type="Texture2D" uid="uid://bycu3naego1ua" path="res://Sprite-0010px.png" id="1_regki"]
+[ext_resource type="Script" uid="uid://bf67yuiwcciql" path="res://explosion_particles.gd" id="2_xhyia"]
+
+[sub_resource type="Curve" id="Curve_xhyia"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, -360), 0.0, 0.0, 0, 0, Vector2(1, 360), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_im78l"]
+curve = SubResource("Curve_xhyia")
+
+[sub_resource type="Gradient" id="Gradient_xhyia"]
+offsets = PackedFloat32Array(0, 0.25, 0.508333, 0.683333, 0.983333, 1)
+colors = PackedColorArray(0.552941, 0.552941, 0.552941, 1, 0.780392, 0.780392, 0.780392, 1, 1, 1, 1, 1, 1, 0.482353, 0, 1, 0.501961, 0, 0, 1, 0.501961, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_im78l"]
+gradient = SubResource("Gradient_xhyia")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_im78l"]
+particle_flag_disable_z = true
+angle_min = 1.07288e-05
+angle_max = 6.30001
+angle_curve = SubResource("CurveTexture_im78l")
+direction = Vector3(0, 0, 0)
+spread = 180.0
+initial_velocity_min = 200.0
+initial_velocity_max = 400.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_max = 1.5
+color_ramp = SubResource("GradientTexture1D_im78l")
+
+[node name="ExplosionParticles" type="GPUParticles2D"]
+emitting = false
+amount = 50
+texture = ExtResource("1_regki")
+one_shot = true
+explosiveness = 1.0
+trail_lifetime = 1.0
+process_material = SubResource("ParticleProcessMaterial_im78l")
+script = ExtResource("2_xhyia")

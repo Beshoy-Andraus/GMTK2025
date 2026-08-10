@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dp5k35drswtgo"
+path="res://.godot/imported/Retro Blop 07.wav-817c14181c4f4c82d34c5a0662fa351d.sample"
+
+[deps]
+
+source_file="res://Retro Blop 07.wav"
+dest_files=["res://.godot/imported/Retro Blop 07.wav-817c14181c4f4c82d34c5a0662fa351d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

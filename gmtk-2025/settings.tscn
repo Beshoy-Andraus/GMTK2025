@@ -1,0 +1,94 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3d3qrsaujh3g"]
+
+[ext_resource type="Script" uid="uid://dqutyppprfk5" path="res://settings.gd" id="1_nkug2"]
+[ext_resource type="Texture2D" uid="uid://e24nltdm0tgk" path="res://bSprite-0012g.png" id="1_x2hje"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ykye"]
+atlas = ExtResource("1_x2hje")
+region = Rect2(8, 2, 30, 28)
+
+[node name="Settings" type="Node2D"]
+position = Vector2(198, 174)
+script = ExtResource("1_nkug2")
+
+[node name="BSprite-0012g" type="Sprite2D" parent="."]
+position = Vector2(96, -32)
+scale = Vector2(6.375, 7.59375)
+texture = ExtResource("1_x2hje")
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_left = -78.0
+offset_top = -86.0
+offset_right = 56.0
+offset_bottom = -35.0
+min_value = -80.0
+max_value = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="HSlider2" type="HSlider" parent="."]
+offset_left = -78.0
+offset_top = -14.0
+offset_right = 56.0
+offset_bottom = 37.0
+min_value = -80.0
+max_value = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = -38.0
+offset_top = -94.0
+offset_right = 18.0
+offset_bottom = -70.0
+mouse_filter = 2
+text = "Music"
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 10.0
+offset_bottom = 10.0
+mouse_filter = 2
+text = "SFX"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -134.0
+offset_top = -166.0
+offset_right = -104.0
+offset_bottom = -134.0
+texture_normal = SubResource("AtlasTexture_3ykye")
+stretch_mode = 0
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+offset_left = -126.0
+offset_top = -166.0
+offset_right = -102.0
+offset_bottom = -124.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 20
+text = "X"
+fit_content = true
+scroll_active = false
+
+[node name="CheckButton" type="CheckButton" parent="."]
+visible = false
+offset_left = -38.0
+offset_top = 18.0
+offset_right = 6.0
+offset_bottom = 42.0
+focus_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+offset_left = -54.0
+offset_top = -6.0
+offset_right = 58.0
+offset_bottom = 34.0
+mouse_filter = 2
+text = "Hide Clock:"
+
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="HSlider2" to="." method="_on_h_slider_2_value_changed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]

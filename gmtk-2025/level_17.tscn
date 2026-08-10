@@ -1,0 +1,104 @@
+[gd_scene load_steps=11 format=3 uid="uid://dbcnlxqqr72vn"]
+
+[ext_resource type="Script" uid="uid://cseqja6o81cww" path="res://level_17.gd" id="1_ys5ji"]
+[ext_resource type="Texture2D" uid="uid://b55qhsw6xqubd" path="res://Screenshot 2025-08-01 190044.png" id="2_bmt82"]
+[ext_resource type="PackedScene" uid="uid://crgctx28ocx2" path="res://tile_map.tscn" id="3_ux4ow"]
+[ext_resource type="PackedScene" uid="uid://b7dv1lt3w3dpm" path="res://tile_map_glow.tscn" id="4_0y6gu"]
+[ext_resource type="PackedScene" uid="uid://bunflqxjo8360" path="res://lazer.tscn" id="5_74rdr"]
+[ext_resource type="PackedScene" uid="uid://c11wcg6v0j78l" path="res://key.tscn" id="6_0y6gu"]
+[ext_resource type="PackedScene" uid="uid://cenbf0jmp3xxl" path="res://door.tscn" id="7_74rdr"]
+[ext_resource type="PackedScene" uid="uid://baubncy5lxxs0" path="res://flag.tscn" id="8_o1uqt"]
+[ext_resource type="PackedScene" uid="uid://dx4vsde7hjy42" path="res://clock.tscn" id="9_74rdr"]
+[ext_resource type="PackedScene" uid="uid://befwjwhyjtcgm" path="res://level_19.tscn" id="9_o1uqt"]
+
+[node name="level_17" type="Node2D"]
+script = ExtResource("1_ys5ji")
+
+[node name="Screenshot2025-08-01190044" type="Sprite2D" parent="."]
+modulate = Color(0.627451, 0.627451, 0.627451, 1)
+position = Vector2(-80.0001, 3.00003)
+scale = Vector2(0.416205, 0.372736)
+texture = ExtResource("2_bmt82")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -143.0
+offset_top = 6.0
+offset_right = 60.0
+offset_bottom = 46.0
+text = "Level 18: Laser Turbines"
+
+[node name="TileMap" parent="." instance=ExtResource("3_ux4ow")]
+layer_0/tile_data = PackedInt32Array(-1, 262144, 0, -65538, 262144, 0, -2, 262144, 0, -65537, 262144, 0, 131071, 262144, 0, -131071, 262144, 0, -65535, 262144, 0, 65537, 262144, 0, -131075, 262144, 0, -65539, 262144, 0, -3, 262144, 0, 131069, 262144, 0, 196605, 262144, 0, -131074, 196608, 0, 196606, 262144, 0, -131073, 262144, 0, 196607, 262144, 0, -196607, 262144, 0, 131073, 262144, 0, -196606, 262144, 0, -131070, 262144, 0, -65534, 262144, 0, 65538, 262144, 0, 131074, 262144, 0, 262141, 262144, 0, 262142, 262144, 0, 262143, 262144, 0, 196609, 262144, 0, 196610, 262144, 0, -196605, 196608, 0, -131069, 262144, 0, -65533, 262144, 0, 65539, 262144, 0, 131075, 262144, 0, 196611, 262144, 0, 131070, 262144, 0, -196609, 65536, 0, -131072, 262144, 0, -65532, 0, 0, 2, 262144, 0, 262145, 0, 0, 131072, 65536, 0, 196604, 262144, 0, 196603, 262144, 0, -131076, 262144, 0)
+
+[node name="TileMap_glow" parent="." instance=ExtResource("4_0y6gu")]
+layer_0/tile_data = PackedInt32Array(-131075, 327680, 0, -65539, 327680, 0, -3, 327680, 0, -131074, 327680, 0, -65538, 327680, 0, -2, 327680, 0, -131073, 327680, 0, -65537, 327680, 0, -1, 327680, 0, -196609, 327680, 0, -131072, 327680, 0, -131071, 327680, 0, -131070, 327680, 0, -131069, 327680, 0, -196607, 327680, 0, -65535, 327680, 0, -196606, 327680, 0, -65534, 327680, 0, -196605, 327680, 0, -65533, 327680, 0, -65532, 327680, 0, 2, 327680, 0, 65538, 327680, 0, 131074, 327680, 0, 196610, 327680, 0, 65537, 327680, 0, 131073, 327680, 0, 196609, 327680, 0, 65539, 327680, 0, 131075, 327680, 0, 196611, 327680, 0, 262145, 327680, 0, 196603, 327680, 0, 196604, 327680, 0, 196605, 327680, 0, 196606, 327680, 0, 196607, 327680, 0, 131072, 327680, 0, 131069, 327680, 0, 262141, 327680, 0, 131070, 327680, 0, 262142, 327680, 0, 131071, 327680, 0, 262143, 327680, 0, -131076, 327680, 0)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-121, -72)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-64, 15)
+zoom = Vector2(2.2, 2.2)
+
+[node name="lazer" parent="." instance=ExtResource("5_74rdr")]
+position = Vector2(-53, -42)
+direction = "clock"
+facing = "right"
+max_tick = 1
+
+[node name="lazer2" parent="." instance=ExtResource("5_74rdr")]
+position = Vector2(-53, -42)
+direction = "clock"
+facing = "left"
+max_tick = 1
+
+[node name="lazer3" parent="." instance=ExtResource("5_74rdr")]
+position = Vector2(-53, 85)
+direction = "cclock"
+facing = "left"
+max_tick = 1
+
+[node name="lazer4" parent="." instance=ExtResource("5_74rdr")]
+position = Vector2(-53, 85)
+direction = "cclock"
+facing = "right"
+max_tick = 1
+
+[node name="lazer5" parent="." instance=ExtResource("5_74rdr")]
+position = Vector2(77, 83)
+direction = "clock"
+facing = "right"
+max_tick = 1
+
+[node name="lazer6" parent="." instance=ExtResource("5_74rdr")]
+position = Vector2(77, 83)
+direction = "clock"
+facing = "left"
+max_tick = 1
+
+[node name="lazer7" parent="." instance=ExtResource("5_74rdr")]
+position = Vector2(76, -44)
+direction = "clock"
+facing = "left"
+max_tick = 1
+
+[node name="lazer8" parent="." instance=ExtResource("5_74rdr")]
+position = Vector2(76, -45)
+direction = "clock"
+facing = "right"
+max_tick = 1
+
+[node name="key" parent="." instance=ExtResource("6_0y6gu")]
+position = Vector2(73, 20)
+door = NodePath("../door")
+
+[node name="door" parent="." instance=ExtResource("7_74rdr")]
+position = Vector2(-115, 87)
+
+[node name="flag" parent="." instance=ExtResource("8_o1uqt")]
+position = Vector2(-150, 90)
+next_level = ExtResource("9_o1uqt")
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("9_74rdr")]
+position = Vector2(-231, 6)
+scale = Vector2(4, 4)

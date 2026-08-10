@@ -1,0 +1,273 @@
+[gd_scene load_steps=14 format=3 uid="uid://cf4q06svj7fst"]
+
+[ext_resource type="Script" uid="uid://drt5jf133fxq4" path="res://level_23.gd" id="1_ukobw"]
+[ext_resource type="Texture2D" uid="uid://b55qhsw6xqubd" path="res://Screenshot 2025-08-01 190044.png" id="2_ir7j7"]
+[ext_resource type="PackedScene" uid="uid://crgctx28ocx2" path="res://tile_map.tscn" id="3_ypepn"]
+[ext_resource type="PackedScene" uid="uid://b7dv1lt3w3dpm" path="res://tile_map_glow.tscn" id="4_jqjp7"]
+[ext_resource type="PackedScene" uid="uid://djcsfjmm2bbde" path="res://playerclone.tscn" id="5_efc40"]
+[ext_resource type="PackedScene" uid="uid://c2cyjo1kgubph" path="res://enemy.tscn" id="6_v7obi"]
+[ext_resource type="PackedScene" uid="uid://c1qje6djeqjf7" path="res://conveyor.tscn" id="7_rspqv"]
+[ext_resource type="PackedScene" uid="uid://c11wcg6v0j78l" path="res://key.tscn" id="8_ypepn"]
+[ext_resource type="PackedScene" uid="uid://cenbf0jmp3xxl" path="res://door.tscn" id="9_jqjp7"]
+[ext_resource type="PackedScene" uid="uid://bunflqxjo8360" path="res://lazer.tscn" id="10_jqjp7"]
+[ext_resource type="PackedScene" uid="uid://baubncy5lxxs0" path="res://flag.tscn" id="11_efc40"]
+[ext_resource type="PackedScene" uid="uid://ctty5vlc3ig4o" path="res://win.tscn" id="12_rspqv"]
+[ext_resource type="PackedScene" uid="uid://dx4vsde7hjy42" path="res://clock.tscn" id="12_v7obi"]
+
+[node name="Level_23" type="Node2D"]
+script = ExtResource("1_ukobw")
+
+[node name="Screenshot2025-08-01190044" type="Sprite2D" parent="."]
+modulate = Color(0.627451, 0.627451, 0.627451, 1)
+position = Vector2(-35, 12)
+scale = Vector2(0.655817, 0.614871)
+texture = ExtResource("2_ir7j7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -204.0
+offset_top = 189.0
+offset_right = 238.0
+offset_bottom = 341.0
+text = "Level 23: The FInale"
+
+[node name="TileMap" parent="." instance=ExtResource("3_ypepn")]
+layer_0/tile_data = PackedInt32Array(131060, 262144, 268435456, 196596, 262144, 268435456, 262132, 262144, 268435456, 131061, 262144, 268435456, 196597, 262144, 268435456, 262133, 262144, 268435456, 131062, 262144, 268435456, 196598, 262144, 268435456, 262134, 262144, 268435456, 131063, 262144, 268435456, 196599, 262144, 268435456, 262135, 262144, 268435456, 131064, 262144, 268435456, 196600, 262144, 268435456, 262136, 262144, 268435456, 131065, 262144, 268435456, 196601, 262144, 268435456, 262137, 262144, 268435456, 131066, 262144, 268435456, 196602, 262144, 268435456, 262138, 262144, 268435456, 131067, 262144, 268435456, 196603, 262144, 268435456, 262139, 262144, 268435456, 131068, 262144, 268435456, 196604, 262144, 268435456, 262140, 262144, 268435456, 131069, 262144, 268435456, 196605, 262144, 268435456, 262141, 262144, 268435456, 196606, 262144, 268435456, 196607, 262144, 268435456, 131072, 262144, 268435456, 65537, 262144, 268435456, 131073, 262144, 268435456, 196609, 262144, 268435456, 65538, 262144, 268435456, 131074, 262144, 268435456, 196610, 262144, 268435456, 65539, 262144, 268435456, 131075, 262144, 268435456, 196611, 262144, 268435456, -196598, 262144, 268435456, -131062, 262144, 268435456, -65526, 262144, 268435456, 10, 262144, 268435456, 196595, 262144, 0, -262159, 262144, 0, -196623, 262144, 0, -131087, 262144, 0, -65551, 262144, 0, -15, 262144, 0, -262158, 262144, 0, -131086, 262144, 0, -262157, 262144, 0, -196621, 262144, 0, -131085, 262144, 0, -65549, 262144, 0, -13, 262144, 0, -262156, 262144, 0, -131084, 262144, 0, -12, 262144, 0, -262155, 262144, 0, -196619, 262144, 0, -131083, 262144, 0, -262154, 262144, 0, -10, 262144, 0, -262153, 262144, 0, -196617, 262144, 0, -131081, 262144, 0, -65545, 262144, 0, -9, 262144, 0, -262152, 262144, 0, -131080, 262144, 0, -8, 262144, 0, -262151, 262144, 0, -196615, 262144, 0, -131079, 262144, 0, -65543, 262144, 0, -7, 262144, 0, -11, 262144, 0, -65547, 262144, 0, -131082, 262144, 0, 65540, 262144, 0, 131076, 262144, 0, 196612, 262144, 0, 65541, 262144, 0, 131077, 262144, 0, 196613, 262144, 0, 4, 262144, 0, 5, 262144, 0, 6, 262144, 0, 65542, 262144, 0, 131078, 262144, 0, 196614, 262144, 0, 262148, 262144, 0, 262149, 262144, 0, 262150, 262144, 0, 65543, 262144, 0, 131079, 262144, 0, 196615, 262144, 0, 327684, 262144, 0, 327685, 262144, 0, 327686, 262144, 0, 65544, 262144, 0, 131080, 262144, 0, 196616, 262144, 0, -65532, 262144, 0, -65531, 262144, 0, -65530, 262144, 0, 3, 262144, 0, 7, 262144, 0, 262151, 262144, 0, 262147, 262144, 0, -65533, 262144, 0, -65529, 262144, 0, 327687, 262144, 0, 327683, 262144, 0, 131081, 262144, 0, 131082, 262144, 0, 65546, 262144, 0)
+
+[node name="TileMap_glow" parent="." instance=ExtResource("4_jqjp7")]
+layer_0/tile_data = PackedInt32Array(-262159, 327680, 0, -262158, 327680, 0, -262157, 327680, 0, -262156, 327680, 0, -262155, 327680, 0, -262154, 327680, 0, -262153, 327680, 0, -262152, 327680, 0, -262151, 327680, 0, -196615, 327680, 0, -131079, 327680, 0, -65543, 327680, 0, -7, 327680, 0, -13, 327680, 0, -12, 327680, 0, -11, 327680, 0, -10, 327680, 0, -9, 327680, 0, -8, 327680, 0, -196617, 327680, 0, -131081, 327680, 0, -65545, 327680, 0, -131083, 327680, 0, -131082, 327680, 0, -196619, 327680, 0, -65547, 327680, 0, -196621, 327680, 0, -131085, 327680, 0, -65549, 327680, 0, -131087, 327680, 0, -131086, 327680, 0, -131084, 327680, 0, -196623, 327680, 0, -65551, 327680, 0, -15, 327680, 0, 196595, 327680, 0, 131060, 327680, 0, 196596, 327680, 0, 262132, 327680, 0, 131061, 327680, 0, 196597, 327680, 0, 262133, 327680, 0, 131062, 327680, 0, 196598, 327680, 0, 262134, 327680, 0, 131063, 327680, 0, 196599, 327680, 0, 262135, 327680, 0, 131064, 327680, 0, 196600, 327680, 0, 262136, 327680, 0, 131065, 327680, 0, 196601, 327680, 0, 262137, 327680, 0, 131066, 327680, 0, 196602, 327680, 0, 262138, 327680, 0, 131067, 327680, 0, 196603, 327680, 0, 262139, 327680, 0, 131068, 327680, 0, 196604, 327680, 0, 262140, 327680, 0, 131069, 327680, 0, 196605, 327680, 0, 262141, 327680, 0, 196606, 327680, 0, 196607, 327680, 0, 131072, 327680, 0, 65537, 327680, 0, 131073, 327680, 0, 196609, 327680, 0, 65538, 327680, 0, 131074, 327680, 0, 196610, 327680, 0, 65539, 327680, 0, 131075, 327680, 0, 196611, 327680, 0, 65540, 327680, 0, 131076, 327680, 0, 196612, 327680, 0, 65541, 327680, 0, 131077, 327680, 0, 196613, 327680, 0, 65542, 327680, 0, 131078, 327680, 0, 196614, 327680, 0, 65543, 327680, 0, 131079, 327680, 0, 196615, 327680, 0, 65544, 327680, 0, 131080, 327680, 0, 196616, 327680, 0, -65533, 327680, 0, 3, 327680, 0, 262147, 327680, 0, 327683, 327680, 0, -65532, 327680, 0, 4, 327680, 0, 262148, 327680, 0, 327684, 327680, 0, -65531, 327680, 0, 5, 327680, 0, 262149, 327680, 0, 327685, 327680, 0, -65530, 327680, 0, 6, 327680, 0, 262150, 327680, 0, 327686, 327680, 0, -65529, 327680, 0, 7, 327680, 0, 262151, 327680, 0, 327687, 327680, 0, 131081, 327680, 268435456, 131082, 327680, 268435456, -196598, 327680, 268435456, -131062, 327680, 268435456, -65526, 327680, 268435456, 10, 327680, 268435456, 65546, 327680, 268435456)
+
+[node name="playerclone" parent="." instance=ExtResource("5_efc40")]
+z_index = 1
+position = Vector2(-475, -9)
+max_tick = 3
+hide = true
+
+[node name="enemy" parent="." instance=ExtResource("6_v7obi")]
+position = Vector2(-341, 117)
+right = false
+up = true
+moves = 2
+max_tick = 1
+
+[node name="enemy2" parent="." instance=ExtResource("6_v7obi")]
+position = Vector2(-311, 56)
+right = false
+down = true
+moves = 2
+max_tick = 1
+
+[node name="enemy3" parent="." instance=ExtResource("6_v7obi")]
+position = Vector2(-277, 115)
+right = false
+up = true
+moves = 2
+max_tick = 1
+
+[node name="enemy4" parent="." instance=ExtResource("6_v7obi")]
+position = Vector2(-246, 55)
+right = false
+down = true
+moves = 2
+max_tick = 1
+
+[node name="enemy5" parent="." instance=ExtResource("6_v7obi")]
+position = Vector2(-213, 118)
+right = false
+up = true
+moves = 2
+max_tick = 1
+
+[node name="enemy6" parent="." instance=ExtResource("6_v7obi")]
+position = Vector2(-182, 54)
+right = false
+down = true
+moves = 2
+max_tick = 1
+
+[node name="enemy7" parent="." instance=ExtResource("6_v7obi")]
+position = Vector2(-150, 116)
+right = false
+up = true
+moves = 2
+max_tick = 1
+
+[node name="enemy8" parent="." instance=ExtResource("6_v7obi")]
+position = Vector2(-119, 55)
+right = false
+down = true
+moves = 2
+max_tick = 1
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-411, 87)
+
+[node name="conveyor" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(-243, -11)
+left = true
+starter = true
+max_tick = 1
+
+[node name="conveyor2" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(-242, -75)
+down = true
+max_tick = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-64, -4)
+zoom = Vector2(1.37, 1.37)
+
+[node name="conveyor3" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(-181, -79)
+down = true
+max_tick = 1
+
+[node name="conveyor4" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(-184, -138)
+down = true
+max_tick = 1
+
+[node name="conveyor5" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(-310, -13)
+left = true
+max_tick = 1
+
+[node name="conveyor6" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(-347, -9)
+left = true
+max_tick = 1
+
+[node name="conveyor7" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(-373, -76)
+right = true
+max_tick = 1
+
+[node name="conveyor8" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(-374, -136)
+right = true
+max_tick = 1
+
+[node name="conveyor9" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(-252, -137)
+right = true
+max_tick = 1
+
+[node name="conveyor10" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(-439, -75)
+up = true
+max_tick = 1
+
+[node name="conveyor11" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(-442, -135)
+right = true
+max_tick = 1
+
+[node name="conveyor12" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(-178, -12)
+left = true
+max_tick = 1
+
+[node name="key" parent="." instance=ExtResource("8_ypepn")]
+position = Vector2(-345, -76)
+door = NodePath("../door")
+
+[node name="conveyor13" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(-58, 120)
+up = true
+max_tick = 1
+
+[node name="conveyor14" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(-54, 85)
+right = true
+max_tick = 1
+
+[node name="conveyor15" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(-59, 50)
+down = true
+max_tick = 1
+
+[node name="door" parent="." instance=ExtResource("9_jqjp7")]
+position = Vector2(-22, 86)
+
+[node name="conveyor16" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(-314, -139)
+right = true
+max_tick = 1
+
+[node name="conveyor17" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(201, 182)
+up = true
+max_tick = 2
+
+[node name="conveyor18" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(203, 147)
+up = true
+max_tick = 2
+
+[node name="conveyor19" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(202, 118)
+up = true
+max_tick = 2
+
+[node name="conveyor20" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(168, 89)
+right = true
+max_tick = 2
+
+[node name="conveyor21" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(135, 88)
+right = true
+max_tick = 2
+
+[node name="conveyor22" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(203, 60)
+down = true
+max_tick = 2
+
+[node name="conveyor23" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(201, 26)
+down = true
+max_tick = 2
+
+[node name="conveyor24" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(200, -7)
+down = true
+max_tick = 2
+
+[node name="conveyor25" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(299, 88)
+left = true
+max_tick = 2
+
+[node name="conveyor26" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(265, 88)
+left = true
+max_tick = 2
+
+[node name="conveyor27" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(232, 93)
+left = true
+max_tick = 2
+
+[node name="conveyor28" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(74, 89)
+right = true
+max_tick = 2
+
+[node name="conveyor29" parent="." instance=ExtResource("7_rspqv")]
+position = Vector2(103, 88)
+right = true
+max_tick = 2
+
+[node name="lazer" parent="." instance=ExtResource("10_jqjp7")]
+position = Vector2(171, 85)
+direction = "cclock"
+facing = "left"
+max_tick = 3
+
+[node name="flag" parent="." instance=ExtResource("11_efc40")]
+position = Vector2(330, -75)
+next_level = ExtResource("12_rspqv")
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("12_v7obi")]
+position = Vector2(-19, -110)
+scale = Vector2(5, 5)

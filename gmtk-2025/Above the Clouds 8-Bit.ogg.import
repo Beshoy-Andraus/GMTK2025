@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://kc5tcgpleyer"
+path="res://.godot/imported/Above the Clouds 8-Bit.ogg-0e07e9303628b3825ebeb7638c721807.oggvorbisstr"
+
+[deps]
+
+source_file="res://Above the Clouds 8-Bit.ogg"
+dest_files=["res://.godot/imported/Above the Clouds 8-Bit.ogg-0e07e9303628b3825ebeb7638c721807.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

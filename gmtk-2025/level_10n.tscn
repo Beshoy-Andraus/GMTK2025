@@ -1,0 +1,284 @@
+[gd_scene load_steps=11 format=3 uid="uid://bq6e2r8evkpjq"]
+
+[ext_resource type="Script" uid="uid://buxrrffutyppp" path="res://level_10n.gd" id="1_sg0ln"]
+[ext_resource type="Texture2D" uid="uid://b55qhsw6xqubd" path="res://Screenshot 2025-08-01 190044.png" id="2_2dp16"]
+[ext_resource type="PackedScene" uid="uid://crgctx28ocx2" path="res://tile_map.tscn" id="2_tq8or"]
+[ext_resource type="PackedScene" uid="uid://b7dv1lt3w3dpm" path="res://tile_map_glow.tscn" id="3_2dp16"]
+[ext_resource type="PackedScene" uid="uid://cenbf0jmp3xxl" path="res://door.tscn" id="4_7ub8l"]
+[ext_resource type="PackedScene" uid="uid://c11wcg6v0j78l" path="res://key.tscn" id="5_kkhxn"]
+[ext_resource type="PackedScene" uid="uid://c2cyjo1kgubph" path="res://enemy.tscn" id="6_jbmvi"]
+[ext_resource type="PackedScene" uid="uid://baubncy5lxxs0" path="res://flag.tscn" id="7_tq8or"]
+[ext_resource type="PackedScene" uid="uid://dx4vsde7hjy42" path="res://clock.tscn" id="9_7ub8l"]
+[ext_resource type="PackedScene" uid="uid://bialyehh1a240" path="res://level_10.tscn" id="9_kkhxn"]
+
+[node name="level_10n" type="Node2D"]
+script = ExtResource("1_sg0ln")
+
+[node name="Screenshot2025-08-01190044" type="Sprite2D" parent="."]
+modulate = Color(0.625597, 0.625597, 0.625597, 1)
+position = Vector2(294.75, 56.5)
+scale = Vector2(0.601454, 0.559581)
+texture = ExtResource("2_2dp16")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(40, -11)
+
+[node name="TileMap" parent="." instance=ExtResource("2_tq8or")]
+layer_0/tile_data = PackedInt32Array(-1, 262144, 0, -65536, 262144, 0, -131071, 262144, 0, -65535, 262144, 0, 1, 262144, 0, -131070, 262144, 0, -65534, 262144, 0, 2, 262144, 0, -131069, 262144, 0, -65533, 262144, 0, 3, 262144, 0, -196606, 131072, 0, -196605, 262144, 0, 65538, 262144, 0, 65539, 262144, 0, -196604, 262144, 0, -131068, 262144, 0, -65532, 262144, 0, 4, 262144, 0, 65540, 131072, 0, -131067, 262144, 0, -65531, 262144, 0, 5, 262144, 0, -65530, 262144, 0, -65529, 262144, 0, -65528, 262144, 0, -65527, 262144, 0, -65526, 262144, 0, -65525, 262144, 0, -65524, 262144, 0, -65523, 262144, 0, -65522, 262144, 0, -65521, 262144, 0, -131065, 262144, 0, -131066, 262144, 0, -131064, 262144, 0, -131063, 262144, 0, -131062, 262144, 0, -131061, 262144, 0, -131060, 262144, 0, -131059, 262144, 0, -131058, 262144, 0, -131057, 262144, 0, 6, 262144, 0, 7, 262144, 0, 8, 0, 0, 9, 262144, 0, 10, 262144, 0, 11, 262144, 0, 12, 262144, 0, 13, 262144, 0, 14, 262144, 0, 15, 262144, 0, 65543, 262144, 0, 131079, 262144, 0, 65551, 262144, 0, 131087, 262144, 0, 65549, 262144, 0, 131085, 262144, 0, 65547, 262144, 0, 131083, 262144, 0, 65545, 262144, 0, 131081, 262144, 0, -131056, 0, 0, -65520, 262144, 0, 16, 196608, 0, -262136, 262144, 0, -196600, 262144, 0, -262134, 262144, 0, -196598, 262144, 0, -262132, 262144, 0, -196596, 262144, 0, -262130, 262144, 0, -196594, 262144, 0, -262128, 262144, 0, -196592, 262144, 0, -65519, 262144, 0, -262138, 262144, 0, -196602, 262144, 0)
+
+[node name="TileMap_glow" parent="." instance=ExtResource("3_2dp16")]
+layer_0/tile_data = PackedInt32Array(-1, 327680, 0, -65536, 327680, 0, -65535, 327680, 0, -65534, 327680, 0, -65533, 327680, 0, -65532, 327680, 0, -65531, 327680, 0, -65530, 327680, 0, -65529, 327680, 0, -65528, 327680, 0, -65527, 327680, 0, -65526, 327680, 0, -65525, 327680, 0, -65524, 327680, 0, -65523, 327680, 0, -65522, 327680, 0, -65521, 327680, 0, -65520, 327680, 0, -65519, 327680, 0, -262128, 327680, 0, -196592, 327680, 0, -131056, 327680, 0, 16, 327680, 0, -131057, 327680, 0, 15, 327680, 0, 65551, 327680, 0, 131087, 327680, 0, -262130, 327680, 0, -196594, 327680, 0, -131058, 327680, 0, 14, 327680, 0, -131059, 327680, 0, 13, 327680, 0, 65549, 327680, 0, 131085, 327680, 0, -262132, 327680, 0, -196596, 327680, 0, -131060, 327680, 0, 12, 327680, 0, -131061, 327680, 0, 11, 327680, 0, 65547, 327680, 0, 131083, 327680, 0, -262135, 327680, 0, -196599, 327680, 0, -131063, 327680, 0, 9, 327680, 0, -262134, 327680, 0, -196598, 327680, 0, -131062, 327680, 0, 10, 327680, 0, 65545, 327680, 0, 131081, 327680, 0, -262136, 327680, 0, -196600, 327680, 0, -131064, 327680, 0, 8, 327680, 0, -131065, 327680, 0, 7, 327680, 0, 65543, 327680, 0, 131079, 327680, 0, -262138, 327680, 0, -196602, 327680, 0, -131066, 327680, 0, 6, 327680, 0, -131067, 327680, 0, 5, 327680, 0, -196604, 327680, 0, -131068, 327680, 0, 4, 327680, 0, 65540, 327680, 0, -196605, 327680, 0, -131069, 327680, 0, 3, 327680, 0, 65539, 327680, 0, -196606, 327680, 0, -131070, 327680, 0, 2, 327680, 0, 65538, 327680, 0, -131071, 327680, 0, 1, 327680, 0)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="door" parent="Node2D" instance=ExtResource("4_7ub8l")]
+position = Vector2(205, -77)
+
+[node name="door2" parent="Node2D" instance=ExtResource("4_7ub8l")]
+position = Vector2(270, -79)
+
+[node name="door3" parent="Node2D" instance=ExtResource("4_7ub8l")]
+position = Vector2(234, 51)
+
+[node name="door4" parent="Node2D" instance=ExtResource("4_7ub8l")]
+position = Vector2(297, 52)
+
+[node name="door5" parent="Node2D" instance=ExtResource("4_7ub8l")]
+position = Vector2(363, 51)
+
+[node name="door6" parent="Node2D" instance=ExtResource("4_7ub8l")]
+position = Vector2(426, 51)
+
+[node name="door7" parent="Node2D" instance=ExtResource("4_7ub8l")]
+position = Vector2(492, 51)
+
+[node name="door8" parent="Node2D" instance=ExtResource("4_7ub8l")]
+position = Vector2(522, -76)
+
+[node name="door9" parent="Node2D" instance=ExtResource("4_7ub8l")]
+position = Vector2(459, -76)
+
+[node name="door10" parent="Node2D" instance=ExtResource("4_7ub8l")]
+position = Vector2(394, -77)
+
+[node name="door11" parent="Node2D" instance=ExtResource("4_7ub8l")]
+position = Vector2(333, -77)
+
+[node name="door12" parent="Node2D" instance=ExtResource("4_7ub8l")]
+position = Vector2(11, -8)
+
+[node name="key" parent="Node2D" instance=ExtResource("5_kkhxn")]
+position = Vector2(554, -13)
+door = NodePath("../door8")
+door2 = NodePath("../door9")
+door3 = NodePath("../door10")
+door4 = NodePath("../door11")
+door5 = NodePath("../door12")
+
+[node name="key2" parent="Node2D" instance=ExtResource("5_kkhxn")]
+position = Vector2(552, -14)
+door = NodePath("../door")
+door2 = NodePath("../door2")
+door3 = NodePath("../door3")
+door4 = NodePath("../door4")
+door5 = NodePath("../door5")
+door6 = NodePath("../door6")
+door7 = NodePath("../door7")
+
+[node name="enemy" parent="Node2D" instance=ExtResource("6_jbmvi")]
+position = Vector2(204, -108)
+right = false
+down = true
+moves = 4
+max_tick = 1
+
+[node name="enemy2" parent="Node2D" instance=ExtResource("6_jbmvi")]
+position = Vector2(268, -111)
+right = false
+down = true
+moves = 4
+max_tick = 1
+
+[node name="enemy3" parent="Node2D" instance=ExtResource("6_jbmvi")]
+position = Vector2(330, -109)
+right = false
+down = true
+moves = 4
+max_tick = 1
+
+[node name="enemy4" parent="Node2D" instance=ExtResource("6_jbmvi")]
+position = Vector2(393, -108)
+right = false
+down = true
+moves = 4
+max_tick = 1
+
+[node name="enemy5" parent="Node2D" instance=ExtResource("6_jbmvi")]
+position = Vector2(457, -108)
+right = false
+down = true
+moves = 4
+max_tick = 1
+
+[node name="enemy6" parent="Node2D" instance=ExtResource("6_jbmvi")]
+position = Vector2(521, -110)
+right = false
+down = true
+moves = 4
+max_tick = 1
+
+[node name="enemy7" parent="Node2D" instance=ExtResource("6_jbmvi")]
+position = Vector2(231, 85)
+right = false
+up = true
+moves = 4
+max_tick = 1
+
+[node name="enemy8" parent="Node2D" instance=ExtResource("6_jbmvi")]
+position = Vector2(299, 85)
+right = false
+up = true
+moves = 4
+max_tick = 1
+
+[node name="enemy9" parent="Node2D" instance=ExtResource("6_jbmvi")]
+position = Vector2(363, 85)
+right = false
+up = true
+moves = 4
+max_tick = 1
+
+[node name="enemy10" parent="Node2D" instance=ExtResource("6_jbmvi")]
+position = Vector2(428, 85)
+right = false
+up = true
+moves = 4
+max_tick = 1
+
+[node name="enemy11" parent="Node2D" instance=ExtResource("6_jbmvi")]
+position = Vector2(492, 87)
+right = false
+up = true
+moves = 4
+max_tick = 1
+
+[node name="door13" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(171, -110)
+
+[node name="door14" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+z_index = -1
+position = Vector2(201, -142)
+
+[node name="door15" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(231, -109)
+
+[node name="door16" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+z_index = -1
+position = Vector2(264, -137)
+
+[node name="door17" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(294, -111)
+
+[node name="door18" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+z_index = -1
+position = Vector2(329, -138)
+
+[node name="door19" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(358, -108)
+
+[node name="door20" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+z_index = -1
+position = Vector2(390, -136)
+
+[node name="door21" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(420, -105)
+
+[node name="door22" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+z_index = -1
+position = Vector2(458, -139)
+
+[node name="door23" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(486, -105)
+
+[node name="door24" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+z_index = -1
+position = Vector2(521, -138)
+
+[node name="door25" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(551, -105)
+
+[node name="door26" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(199, 85)
+
+[node name="door27" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(228, 119)
+
+[node name="door28" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(263, 89)
+
+[node name="door29" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(292, 117)
+
+[node name="door30" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(329, 89)
+
+[node name="door31" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(359, 120)
+
+[node name="door32" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(391, 89)
+
+[node name="door33" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(425, 120)
+
+[node name="door34" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(457, 93)
+
+[node name="door35" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(485, 121)
+
+[node name="door36" parent="Node2D" instance=ExtResource("4_7ub8l")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(525, 94)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(284, -1)
+zoom = Vector2(1.5, 1.5)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 229.0
+offset_top = 144.0
+offset_right = 463.0
+offset_bottom = 213.0
+text = "Level 10: AMBUSH!"
+
+[node name="flag" parent="." instance=ExtResource("7_tq8or")]
+position = Vector2(-23, -4)
+next_level = ExtResource("9_kkhxn")
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("9_7ub8l")]
+position = Vector2(114, 138)
+scale = Vector2(4, 4)

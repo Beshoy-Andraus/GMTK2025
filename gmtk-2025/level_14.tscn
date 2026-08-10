@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://ypjh06xxy6eb"]
+
+[ext_resource type="Script" uid="uid://bqvmwswoik1ny" path="res://level_14.gd" id="1_h1ndj"]
+[ext_resource type="Texture2D" uid="uid://b55qhsw6xqubd" path="res://Screenshot 2025-08-01 190044.png" id="2_5sbtr"]
+[ext_resource type="PackedScene" uid="uid://crgctx28ocx2" path="res://tile_map.tscn" id="2_i3lo1"]
+[ext_resource type="PackedScene" uid="uid://b7dv1lt3w3dpm" path="res://tile_map_glow.tscn" id="3_rpd43"]
+[ext_resource type="PackedScene" uid="uid://baubncy5lxxs0" path="res://flag.tscn" id="4_u7i76"]
+[ext_resource type="PackedScene" uid="uid://fiw4sgcpr6wy" path="res://spinner.tscn" id="5_5sbtr"]
+[ext_resource type="PackedScene" uid="uid://bkkfgeshjcb6x" path="res://level_15.tscn" id="6_baubt"]
+[ext_resource type="PackedScene" uid="uid://cenbf0jmp3xxl" path="res://door.tscn" id="6_i3lo1"]
+[ext_resource type="PackedScene" uid="uid://dx4vsde7hjy42" path="res://clock.tscn" id="7_u7i76"]
+[ext_resource type="PackedScene" uid="uid://c11wcg6v0j78l" path="res://key.tscn" id="8_5sbtr"]
+
+[node name="level_14" type="Node2D" unique_id=655897086]
+script = ExtResource("1_h1ndj")
+
+[node name="Screenshot2025-08-01190044" type="Sprite2D" parent="." unique_id=1705190120]
+modulate = Color(0.625597, 0.625597, 0.625597, 1)
+position = Vector2(38.25, -35)
+scale = Vector2(0.484418, 0.453766)
+texture = ExtResource("2_5sbtr")
+
+[node name="TileMap" parent="." unique_id=357552392 instance=ExtResource("2_i3lo1")]
+layer_0/tile_data = PackedInt32Array(-1, 262144, 0, 65535, 262144, 0, -65536, 262144, 0, 0, 262144, 0, -3, 262144, 0, 65533, 262144, 0, -2, 262144, 0, 65534, 0, 0, -65535, 262144, 0, 1, 262144, 0, -65534, 262144, 0, 2, 196608, 0, 65530, 262144, 0, -5, 196608, 0, 65531, 262144, 0, -4, 262144, 0, 65532, 262144, 0, -65533, 262144, 0, 3, 262144, 0, -65532, 262144, 0, 4, 262144, 0, -65531, 262144, 0, 5, 262144, 0, -65530, 262144, 0, 6, 262144, 0, 65529, 262144, 0, 65528, 262144, 0, 131067, 262144, 0, 131068, 262144, 0, 131069, 262144, 0, 131070, 262144, 0, 131071, 262144, 0, 65536, 262144, 0, 65537, 262144, 0, 65538, 131072, 0, 65539, 262144, 0, 65540, 262144, 0, 65541, 262144, 0, 65542, 262144, 0, 7, 262144, 0, 65543, 0, 0, -65529, 262144, 0, 8, 262144, 0)
+
+[node name="TileMap_glow" parent="." unique_id=550821408 instance=ExtResource("3_rpd43")]
+layer_0/tile_data = PackedInt32Array(65529, 327680, 0, 65530, 327680, 0, 65531, 327680, 0, 65532, 327680, 0, 65533, 327680, 0, 65534, 327680, 0, 65535, 327680, 0, 0, 327680, 0, 1, 327680, 0, 2, 327680, 0, 3, 327680, 0, 4, 327680, 0, 5, 327680, 0, 6, 327680, 0, -5, 327680, 0, -4, 327680, 0, -3, 327680, 0, -2, 327680, 0, -1, 327680, 0, -65536, 327680, 0, -65535, 327680, 0, -65534, 327680, 0, -65533, 327680, 0, -65532, 327680, 0, -65531, 327680, 0, -65530, 327680, 0, 131067, 327680, 0, 131068, 327680, 0, 131069, 327680, 0, 131070, 327680, 0, 131071, 327680, 0, 65536, 327680, 0, 65537, 327680, 0, 65538, 327680, 0, 65539, 327680, 0, 65540, 327680, 0, 65541, 327680, 0, 65542, 327680, 0, 7, 327680, 0, 65528, 327680, 0, 65543, 327680, 0, -65529, 327680, 0, 8, 327680, 0)
+
+[node name="flag" parent="." unique_id=1608179356 instance=ExtResource("4_u7i76")]
+position = Vector2(-250, 22)
+next_level = ExtResource("6_baubt")
+
+[node name="spinner" parent="." unique_id=1439236407 instance=ExtResource("5_5sbtr")]
+position = Vector2(-150, -12)
+direction = "clock"
+size = 2
+facing = "right"
+max_tick = 1
+
+[node name="spinner2" parent="." unique_id=1826539643 instance=ExtResource("5_5sbtr")]
+position = Vector2(-83, -13)
+direction = "clock"
+size = 2
+facing = "right"
+max_tick = 1
+
+[node name="spinner3" parent="." unique_id=1441618185 instance=ExtResource("5_5sbtr")]
+position = Vector2(109, -10)
+direction = "clock"
+size = 2
+facing = "right"
+max_tick = 1
+
+[node name="spinner4" parent="." unique_id=543176656 instance=ExtResource("5_5sbtr")]
+position = Vector2(-19, -11)
+direction = "clock"
+size = 2
+facing = "right"
+max_tick = 1
+
+[node name="spinner5" parent="." unique_id=1624012940 instance=ExtResource("5_5sbtr")]
+position = Vector2(42, -10)
+direction = "clock"
+size = 2
+facing = "right"
+max_tick = 1
+
+[node name="spinner6" parent="." unique_id=1061882426 instance=ExtResource("5_5sbtr")]
+position = Vector2(108, 53)
+direction = "cclock"
+size = 2
+facing = "right"
+max_tick = 1
+
+[node name="spinner7" parent="." unique_id=1051580318 instance=ExtResource("5_5sbtr")]
+position = Vector2(41, 52)
+direction = "cclock"
+size = 2
+facing = "right"
+max_tick = 1
+
+[node name="spinner8" parent="." unique_id=1324906261 instance=ExtResource("5_5sbtr")]
+position = Vector2(-20, 53)
+direction = "cclock"
+size = 2
+facing = "right"
+max_tick = 1
+
+[node name="spinner9" parent="." unique_id=1366173397 instance=ExtResource("5_5sbtr")]
+position = Vector2(-83, 53)
+direction = "cclock"
+size = 2
+facing = "right"
+max_tick = 1
+
+[node name="spinner10" parent="." unique_id=1323741434 instance=ExtResource("5_5sbtr")]
+position = Vector2(-148, 54)
+direction = "cclock"
+size = 2
+facing = "right"
+max_tick = 1
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1485209594]
+position = Vector2(-185, 23)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=527356769]
+position = Vector2(16, -76)
+zoom = Vector2(2, 2)
+
+[node name="spinner11" parent="." unique_id=430350133 instance=ExtResource("5_5sbtr")]
+position = Vector2(168, -12)
+direction = "clock"
+size = 2
+facing = "right"
+max_tick = 1
+
+[node name="spinner12" parent="." unique_id=321489076 instance=ExtResource("5_5sbtr")]
+position = Vector2(171, 52)
+direction = "cclock"
+size = 2
+facing = "right"
+max_tick = 1
+
+[node name="door" parent="." unique_id=1740473251 instance=ExtResource("6_i3lo1")]
+position = Vector2(-213, 22)
+
+[node name="AnimatedSprite2D" parent="." unique_id=2117647914 instance=ExtResource("7_u7i76")]
+position = Vector2(74, -137)
+scale = Vector2(6, 6)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=872905386]
+offset_left = -221.0
+offset_top = -113.0
+offset_right = -79.0
+offset_bottom = -58.0
+text = "Level 15: 
+corridor of doom"
+
+[node name="key" parent="." unique_id=654420401 instance=ExtResource("8_5sbtr")]
+position = Vector2(267, 20)
+door = NodePath("../door")

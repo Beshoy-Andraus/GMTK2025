@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7dv1lt3w3dpm"]
+
+[ext_resource type="Shader" uid="uid://jeaadlfeabem" path="res://global.gdshader" id="1_8xb3t"]
+[ext_resource type="Texture2D" uid="uid://cxudlroiy5ymd" path="res://Sprite-0013.png" id="2_uuqw0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8xb3t"]
+shader = ExtResource("1_8xb3t")
+shader_parameter/blur_amount = 5.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hvc6t"]
+texture = ExtResource("2_uuqw0")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_vo7d0"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_hvc6t")
+
+[node name="TileMap_glow" type="TileMap"]
+material = SubResource("ShaderMaterial_8xb3t")
+tile_set = SubResource("TileSet_vo7d0")
+format = 2

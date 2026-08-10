@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://gt76dfr7vfdc"
+path="res://.godot/imported/Retro PickUp Coin 04.wav-ce860681d630ec8f85d3fab681297b2e.sample"
+
+[deps]
+
+source_file="res://Retro PickUp Coin 04.wav"
+dest_files=["res://.godot/imported/Retro PickUp Coin 04.wav-ce860681d630ec8f85d3fab681297b2e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

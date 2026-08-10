@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=3 uid="uid://bd8ac1ucdvcp3"]
+
+[ext_resource type="Script" uid="uid://dn2mqk0fo54g1" path="res://tran.gd" id="1_a3tlf"]
+
+[sub_resource type="Animation" id="Animation_wj577"]
+resource_name = "dark"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_plcse"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ec1t8"]
+resource_name = "light"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gyheu"]
+_data = {
+&"RESET": SubResource("Animation_plcse"),
+&"dark": SubResource("Animation_wj577"),
+&"light": SubResource("Animation_ec1t8")
+}
+
+[node name="Tran" type="CanvasLayer"]
+script = ExtResource("1_a3tlf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = -8.636
+anchor_top = -10.869
+anchor_right = 17.034
+anchor_bottom = 25.247
+offset_left = -0.327148
+offset_top = 0.112305
+offset_right = -0.167969
+offset_bottom = -0.0566406
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_gyheu")
+}

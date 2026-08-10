@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://4upjkdbyn6an"
+path="res://.godot/imported/A Lonely Robot.ogg-a954b1ac185863022df2ca98c1c8d269.oggvorbisstr"
+
+[deps]
+
+source_file="res://A Lonely Robot.ogg"
+dest_files=["res://.godot/imported/A Lonely Robot.ogg-a954b1ac185863022df2ca98c1c8d269.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

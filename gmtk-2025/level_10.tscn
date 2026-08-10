@@ -1,0 +1,63 @@
+[gd_scene load_steps=11 format=3 uid="uid://bialyehh1a240"]
+
+[ext_resource type="Script" uid="uid://suwhpnskqagp" path="res://level_10.gd" id="1_gnoc6"]
+[ext_resource type="PackedScene" uid="uid://crgctx28ocx2" path="res://tile_map.tscn" id="2_cv5j8"]
+[ext_resource type="Texture2D" uid="uid://b55qhsw6xqubd" path="res://Screenshot 2025-08-01 190044.png" id="2_pyblp"]
+[ext_resource type="PackedScene" uid="uid://b7dv1lt3w3dpm" path="res://tile_map_glow.tscn" id="3_pyblp"]
+[ext_resource type="PackedScene" uid="uid://cenbf0jmp3xxl" path="res://door.tscn" id="4_jjmbq"]
+[ext_resource type="PackedScene" uid="uid://baubncy5lxxs0" path="res://flag.tscn" id="5_helgx"]
+[ext_resource type="PackedScene" uid="uid://c11wcg6v0j78l" path="res://key.tscn" id="6_iqnen"]
+[ext_resource type="PackedScene" uid="uid://fiw4sgcpr6wy" path="res://spinner.tscn" id="7_bx6au"]
+[ext_resource type="PackedScene" uid="uid://dujvm6ee6u302" path="res://level_11.tscn" id="7_jjmbq"]
+[ext_resource type="PackedScene" uid="uid://dx4vsde7hjy42" path="res://clock.tscn" id="9_jjmbq"]
+
+[node name="level_10" type="Node2D"]
+script = ExtResource("1_gnoc6")
+
+[node name="Screenshot2025-08-01190044" type="Sprite2D" parent="."]
+modulate = Color(0.625597, 0.625597, 0.625597, 1)
+position = Vector2(6, 28)
+scale = Vector2(0.371191, 0.332698)
+texture = ExtResource("2_pyblp")
+
+[node name="TileMap" parent="." instance=ExtResource("2_cv5j8")]
+layer_0/tile_data = PackedInt32Array(-1, 262144, 0, 65535, 262144, 0, -65536, 262144, 0, 0, 262144, 0, -65538, 262144, 0, -2, 262144, 0, 65534, 262144, 0, 131070, 262144, 0, -65537, 262144, 0, 131071, 262144, 0, -131072, 262144, 0, 65536, 131072, 0, -131071, 262144, 0, -65535, 262144, 0, 1, 262144, 0, 65537, 262144, 0, -131074, 262144, 0, 196606, 196608, 0, -131073, 262144, 0, 196607, 262144, 0, -196608, 262144, 0, 131072, 262144, 0, -196607, 262144, 0, 131073, 262144, 0, -196606, 196608, 0, -131070, 262144, 0, -65534, 262144, 0, 2, 262144, 0, 65538, 262144, 0, 131074, 0, 0, -262144, 262144, 0, 196608, 262144, 0, 262144, 262144, 0)
+
+[node name="TileMap_glow" parent="." instance=ExtResource("3_pyblp")]
+layer_0/tile_data = PackedInt32Array(-131074, 327680, 0, -65538, 327680, 0, -2, 327680, 0, 65534, 327680, 0, 131070, 327680, 0, 196606, 327680, 0, -131073, 327680, 0, -65537, 327680, 0, -1, 327680, 0, 65535, 327680, 0, 131071, 327680, 0, 196607, 327680, 0, -196608, 327680, 0, -131072, 327680, 0, -65536, 327680, 0, 0, 327680, 0, 65536, 327680, 0, 131072, 327680, 0, -196607, 327680, 0, -131071, 327680, 0, -65535, 327680, 0, 1, 327680, 0, 65537, 327680, 0, 131073, 327680, 0, -196606, 327680, 0, -131070, 327680, 0, -65534, 327680, 0, 2, 327680, 0, 65538, 327680, 0, 131074, 327680, 0, 196608, 327680, 0, 262144, 327680, 0, -262144, 327680, 0)
+
+[node name="door" parent="." instance=ExtResource("4_jjmbq")]
+position = Vector2(11, 115)
+
+[node name="flag" parent="." instance=ExtResource("5_helgx")]
+position = Vector2(7, 152)
+next_level = ExtResource("7_jjmbq")
+
+[node name="key" parent="." instance=ExtResource("6_iqnen")]
+position = Vector2(10, -9)
+door = NodePath("../door")
+
+[node name="spinner" parent="." instance=ExtResource("7_bx6au")]
+position = Vector2(-22, -45)
+direction = "clock"
+size = 2
+facing = "right"
+max_tick = 2
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(6, -105)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(8, 15)
+zoom = Vector2(2.2, 2.2)
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("9_jjmbq")]
+position = Vector2(176, -1)
+scale = Vector2(4, 4)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -225.0
+offset_top = -81.0
+offset_right = -84.0
+offset_bottom = -41.0
+text = "Level 11: ROCKET!"

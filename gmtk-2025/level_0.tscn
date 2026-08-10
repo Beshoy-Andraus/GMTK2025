@@ -1,0 +1,107 @@
+[gd_scene load_steps=17 format=3 uid="uid://cpvo81hegq0yx"]
+
+[ext_resource type="Shader" uid="uid://jeaadlfeabem" path="res://global.gdshader" id="1_v6xcw"]
+[ext_resource type="Script" uid="uid://bnf2d5gf2tawr" path="res://test.gd" id="1_wwd78"]
+[ext_resource type="Texture2D" uid="uid://b55qhsw6xqubd" path="res://Screenshot 2025-08-01 190044.png" id="2_bugp2"]
+[ext_resource type="Texture2D" uid="uid://cxudlroiy5ymd" path="res://Sprite-0013.png" id="3_smnfn"]
+[ext_resource type="Texture2D" uid="uid://bswa67qi77l3u" path="res://Sprite-00031.png" id="6_40rfo"]
+[ext_resource type="PackedScene" uid="uid://vk6ifir2gcpc" path="res://level_1.tscn" id="6_bugp2"]
+[ext_resource type="PackedScene" uid="uid://baubncy5lxxs0" path="res://flag.tscn" id="6_omks2"]
+[ext_resource type="Texture2D" uid="uid://nj7a2kkiqvec" path="res://Sprite-00076.png" id="7_eomlm"]
+[ext_resource type="Texture2D" uid="uid://b6jk742hnnckf" path="res://Sprite-00042.png" id="8_08q8e"]
+[ext_resource type="Texture2D" uid="uid://b80t35el2y6v7" path="res://Sprite-00064.png" id="9_ryq82"]
+[ext_resource type="Texture2D" uid="uid://cdiowfrv562ml" path="res://pp.png" id="10_bugp2"]
+[ext_resource type="Texture2D" uid="uid://dpetprlrxlre2" path="res://Sprite-0001p.png" id="11_t2grt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_smnfn"]
+shader = ExtResource("1_v6xcw")
+shader_parameter/blur_amount = 5.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ryq82"]
+texture = ExtResource("3_smnfn")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_omks2"]
+tile_size = Vector2i(32, 32)
+sources/3 = SubResource("TileSetAtlasSource_ryq82")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3400e"]
+atlas = ExtResource("11_t2grt")
+region = Rect2(0, 32, 32, 32)
+
+[node name="Level 0" type="Node2D"]
+script = ExtResource("1_wwd78")
+
+[node name="Screenshot2025-08-01190044" type="Sprite2D" parent="."]
+modulate = Color(0.627451, 0.627451, 0.627451, 1)
+position = Vector2(-3.50001, -48.5)
+scale = Vector2(0.416205, 0.372736)
+texture = ExtResource("2_bugp2")
+
+[node name="TileMap_glow" type="TileMap" parent="."]
+modulate = Color(1, 1, 1, 0.733333)
+material = SubResource("ShaderMaterial_smnfn")
+tile_set = SubResource("TileSet_omks2")
+format = 2
+layer_0/name = "Layer1"
+layer_0/tile_data = PackedInt32Array(-65535, 327683, 0, -131071, 327683, 0, -393215, 327683, 0, -327681, 327683, 0, -262145, 327683, 0, -196609, 327683, 0, -131073, 327683, 0, -393216, 327683, 0, -327680, 327683, 0, -262144, 327683, 0, -196608, 327683, 0, -327679, 327683, 0, -262143, 327683, 0, -196607, 327683, 0, -65537, 327683, 0, -1, 327683, 0, 65535, 327683, 0, 131071, 327683, 0, 196607, 327683, 0, -131072, 327683, 0, -65536, 327683, 0, 0, 327683, 0, 65536, 327683, 0, 131072, 327683, 0, 1, 327683, 0, 65537, 327683, 0, 131073, 327683, 0)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_omks2")
+format = 2
+layer_0/tile_data = PackedInt32Array(-327681, 262147, 0, -262145, 65539, 0, -196609, 262147, 0, -131073, 262147, 0, -65537, 262147, 0, -1, 262147, 0, 65535, 262147, 0, 131071, 262147, 0, 196607, 262147, 0, -393216, 262147, 0, -327680, 262147, 0, -262144, 262147, 0, -196608, 262147, 0, -131072, 262147, 0, -65536, 262147, 0, 0, 262147, 0, 65536, 262147, 0, 131072, 262147, 0, -393215, 3, 0, -327679, 196611, 0, -262143, 262147, 0, -196607, 3, 0, -131071, 131075, 0, -65535, 262147, 0, 65537, 262147, 0, 131073, 262147, 0, 1, 262147, 0)
+layer_1/name = "Layer1"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -50)
+zoom = Vector2(2.15, 2.15)
+
+[node name="flag" parent="." instance=ExtResource("6_omks2")]
+position = Vector2(12, 80)
+next_level = ExtResource("6_bugp2")
+
+[node name="Sprite-00031" type="Sprite2D" parent="."]
+position = Vector2(-154, -159)
+scale = Vector2(2, 2)
+texture = ExtResource("6_40rfo")
+
+[node name="Sprite-00076" type="Sprite2D" parent="."]
+position = Vector2(-158, -59)
+scale = Vector2(2, 2)
+texture = ExtResource("7_eomlm")
+
+[node name="Sprite-00042" type="Sprite2D" parent="."]
+position = Vector2(-158, 36)
+scale = Vector2(2, 2)
+texture = ExtResource("8_08q8e")
+
+[node name="Sprite-00064" type="Sprite2D" parent="."]
+position = Vector2(164, -9)
+scale = Vector2(2, 2)
+texture = ExtResource("9_ryq82")
+
+[node name="Pp" type="Sprite2D" parent="."]
+position = Vector2(160, -112)
+scale = Vector2(2, 2)
+texture = ExtResource("10_bugp2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(162, -97)
+scale = Vector2(2, 2.0625)
+texture = SubResource("AtlasTexture_3400e")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(7, -167)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 76.0
+offset_top = -197.0
+offset_right = 187.0
+offset_bottom = -157.0
+text = "Level 0: Move"

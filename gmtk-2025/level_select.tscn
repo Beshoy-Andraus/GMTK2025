@@ -1,0 +1,617 @@
+[gd_scene load_steps=6 format=3 uid="uid://ck7j8bm7ds04o"]
+
+[ext_resource type="Script" uid="uid://dnvvoqt7wmag0" path="res://level_select.gd" id="1_wevku"]
+[ext_resource type="Texture2D" uid="uid://dxjt6j6x752eo" path="res://Sprite-000412.png" id="2_apu6u"]
+[ext_resource type="Texture2D" uid="uid://e24nltdm0tgk" path="res://bSprite-0012g.png" id="3_bv7n5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmhjs"]
+atlas = ExtResource("3_bv7n5")
+region = Rect2(8, 2, 30, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wevku"]
+atlas = ExtResource("3_bv7n5")
+region = Rect2(8, 2, 30, 28)
+
+[node name="Level Select" type="Node2D"]
+script = ExtResource("1_wevku")
+
+[node name="Sprite-000412" type="Sprite2D" parent="."]
+position = Vector2(94, 113)
+scale = Vector2(4.12, 3.38)
+texture = ExtResource("2_apu6u")
+
+[node name="0-10" type="Node2D" parent="."]
+visible = false
+position = Vector2(0, 8)
+
+[node name="1" type="TextureButton" parent="0-10"]
+offset_left = -88.0
+offset_top = 112.0
+offset_right = -24.0
+offset_bottom = 175.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="6" type="TextureButton" parent="0-10"]
+offset_left = -88.0
+offset_top = 192.0
+offset_right = -24.0
+offset_bottom = 255.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="2" type="TextureButton" parent="0-10"]
+offset_left = -16.0
+offset_top = 112.0
+offset_right = 48.0
+offset_bottom = 175.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="7" type="TextureButton" parent="0-10"]
+offset_left = -16.0
+offset_top = 192.0
+offset_right = 48.0
+offset_bottom = 255.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="8" type="TextureButton" parent="0-10"]
+offset_left = 56.0
+offset_top = 192.0
+offset_right = 120.0
+offset_bottom = 255.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="9" type="TextureButton" parent="0-10"]
+offset_left = 128.0
+offset_top = 192.0
+offset_right = 192.0
+offset_bottom = 255.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="10" type="TextureButton" parent="0-10"]
+offset_left = 200.0
+offset_top = 192.0
+offset_right = 264.0
+offset_bottom = 255.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="3" type="TextureButton" parent="0-10"]
+offset_left = 56.0
+offset_top = 112.0
+offset_right = 120.0
+offset_bottom = 175.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="4" type="TextureButton" parent="0-10"]
+offset_left = 128.0
+offset_top = 112.0
+offset_right = 192.0
+offset_bottom = 175.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="5" type="TextureButton" parent="0-10"]
+offset_left = 200.0
+offset_top = 112.0
+offset_right = 264.0
+offset_bottom = 175.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="0" type="TextureButton" parent="0-10"]
+offset_left = 56.0
+offset_top = 40.0
+offset_right = 120.0
+offset_bottom = 103.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="next" type="TextureButton" parent="0-10"]
+offset_left = 200.0
+offset_top = -40.0
+offset_right = 264.0
+offset_bottom = 23.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="0-10"]
+offset_left = 212.0
+offset_top = -29.0
+offset_right = 252.0
+offset_bottom = 16.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = ">"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="0-10"]
+offset_left = 211.0
+offset_top = 203.0
+offset_right = 251.0
+offset_bottom = 248.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "10"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="0-10"]
+offset_left = 138.0
+offset_top = 201.0
+offset_right = 178.0
+offset_bottom = 246.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "9"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="0-10"]
+offset_left = 66.0
+offset_top = 201.0
+offset_right = 106.0
+offset_bottom = 246.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "8"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="0-10"]
+offset_left = -3.0
+offset_top = 202.0
+offset_right = 37.0
+offset_bottom = 247.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "7"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="0-10"]
+offset_left = -79.0
+offset_top = 200.0
+offset_right = -39.0
+offset_bottom = 245.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "6"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="0-10"]
+offset_left = 211.0
+offset_top = 120.0
+offset_right = 251.0
+offset_bottom = 165.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "5"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel9" type="RichTextLabel" parent="0-10"]
+offset_left = 137.0
+offset_top = 120.0
+offset_right = 177.0
+offset_bottom = 165.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "4"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel10" type="RichTextLabel" parent="0-10"]
+offset_left = 69.0
+offset_top = 119.0
+offset_right = 109.0
+offset_bottom = 164.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "3"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel11" type="RichTextLabel" parent="0-10"]
+offset_left = -4.0
+offset_top = 119.0
+offset_right = 36.0
+offset_bottom = 164.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "2
+"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel12" type="RichTextLabel" parent="0-10"]
+offset_left = -76.0
+offset_top = 121.0
+offset_right = -36.0
+offset_bottom = 166.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "1"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel13" type="RichTextLabel" parent="0-10"]
+offset_left = 66.0
+offset_top = 48.0
+offset_right = 106.0
+offset_bottom = 93.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "0"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="11-23" type="Node2D" parent="."]
+visible = false
+position = Vector2(0, 8)
+
+[node name="11" type="TextureButton" parent="11-23"]
+offset_left = -88.0
+offset_top = 32.0
+offset_right = -24.0
+offset_bottom = 95.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+
+[node name="16" type="TextureButton" parent="11-23"]
+offset_left = -88.0
+offset_top = 112.0
+offset_right = -24.0
+offset_bottom = 175.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+
+[node name="12" type="TextureButton" parent="11-23"]
+offset_left = -16.0
+offset_top = 32.0
+offset_right = 48.0
+offset_bottom = 95.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+
+[node name="17" type="TextureButton" parent="11-23"]
+offset_left = -16.0
+offset_top = 112.0
+offset_right = 48.0
+offset_bottom = 175.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+
+[node name="18" type="TextureButton" parent="11-23"]
+offset_left = 56.0
+offset_top = 112.0
+offset_right = 120.0
+offset_bottom = 175.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+
+[node name="19" type="TextureButton" parent="11-23"]
+offset_left = 128.0
+offset_top = 112.0
+offset_right = 192.0
+offset_bottom = 175.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+
+[node name="20" type="TextureButton" parent="11-23"]
+offset_left = 200.0
+offset_top = 112.0
+offset_right = 264.0
+offset_bottom = 175.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+
+[node name="13" type="TextureButton" parent="11-23"]
+offset_left = 56.0
+offset_top = 32.0
+offset_right = 120.0
+offset_bottom = 95.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+
+[node name="14" type="TextureButton" parent="11-23"]
+offset_left = 128.0
+offset_top = 32.0
+offset_right = 192.0
+offset_bottom = 95.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+
+[node name="15" type="TextureButton" parent="11-23"]
+offset_left = 200.0
+offset_top = 32.0
+offset_right = 264.0
+offset_bottom = 95.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+
+[node name="last" type="TextureButton" parent="11-23"]
+offset_left = -80.0
+offset_top = -40.0
+offset_right = -16.0
+offset_bottom = 23.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+
+[node name="21" type="TextureButton" parent="11-23"]
+offset_left = -16.0
+offset_top = 192.0
+offset_right = 48.0
+offset_bottom = 255.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+
+[node name="22" type="TextureButton" parent="11-23"]
+offset_left = 56.0
+offset_top = 192.0
+offset_right = 120.0
+offset_bottom = 255.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+
+[node name="23" type="TextureButton" parent="11-23"]
+offset_left = 128.0
+offset_top = 192.0
+offset_right = 192.0
+offset_bottom = 255.0
+texture_normal = SubResource("AtlasTexture_lmhjs")
+stretch_mode = 0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="11-23"]
+offset_left = 68.0
+offset_top = 201.0
+offset_right = 108.0
+offset_bottom = 246.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "22"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="11-23"]
+offset_left = -5.0
+offset_top = 200.0
+offset_right = 35.0
+offset_bottom = 245.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "21"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="11-23"]
+offset_left = 214.0
+offset_top = 121.0
+offset_right = 254.0
+offset_bottom = 166.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "20"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="11-23"]
+offset_left = 138.0
+offset_top = 122.0
+offset_right = 178.0
+offset_bottom = 167.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "19"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="11-23"]
+offset_left = 67.0
+offset_top = 123.0
+offset_right = 107.0
+offset_bottom = 168.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "18"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="11-23"]
+offset_left = -4.0
+offset_top = 121.0
+offset_right = 36.0
+offset_bottom = 166.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "17"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="11-23"]
+offset_left = -76.0
+offset_top = 120.0
+offset_right = -36.0
+offset_bottom = 165.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "16"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel9" type="RichTextLabel" parent="11-23"]
+offset_left = 211.0
+offset_top = 40.0
+offset_right = 251.0
+offset_bottom = 85.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "15"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel10" type="RichTextLabel" parent="11-23"]
+offset_left = 139.0
+offset_top = 40.0
+offset_right = 179.0
+offset_bottom = 85.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "14"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel11" type="RichTextLabel" parent="11-23"]
+offset_left = 66.0
+offset_top = 40.0
+offset_right = 106.0
+offset_bottom = 85.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "13"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel12" type="RichTextLabel" parent="11-23"]
+offset_left = -4.0
+offset_top = 44.0
+offset_right = 36.0
+offset_bottom = 89.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "12"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel13" type="RichTextLabel" parent="11-23"]
+offset_left = -76.0
+offset_top = 42.0
+offset_right = -36.0
+offset_bottom = 87.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "11"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel14" type="RichTextLabel" parent="11-23"]
+offset_left = -71.0
+offset_top = -30.0
+offset_right = -31.0
+offset_bottom = 15.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "<"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel15" type="RichTextLabel" parent="11-23"]
+offset_left = 140.0
+offset_top = 200.0
+offset_right = 180.0
+offset_bottom = 245.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "23"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 8.0
+offset_top = -40.0
+offset_right = 184.0
+offset_bottom = 48.0
+theme_override_font_sizes/normal_font_size = 30
+text = "Level Select"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -155.0
+offset_top = -106.0
+offset_right = -109.0
+offset_bottom = -56.0
+texture_normal = SubResource("AtlasTexture_wevku")
+stretch_mode = 0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = -142.0
+offset_top = -104.0
+offset_right = 34.0
+offset_bottom = -16.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 30
+text = "X"
+fit_content = true
+scroll_active = false
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

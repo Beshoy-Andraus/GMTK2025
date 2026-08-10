@@ -1,0 +1,113 @@
+[gd_scene load_steps=12 format=3 uid="uid://d3i0ojadl0g6c"]
+
+[ext_resource type="Texture2D" uid="uid://b55qhsw6xqubd" path="res://Screenshot 2025-08-01 190044.png" id="1_bjsal"]
+[ext_resource type="Script" uid="uid://0mq3utp4ptea" path="res://20.gd" id="1_iq23b"]
+[ext_resource type="PackedScene" uid="uid://b7dv1lt3w3dpm" path="res://tile_map_glow.tscn" id="2_iq23b"]
+[ext_resource type="PackedScene" uid="uid://crgctx28ocx2" path="res://tile_map.tscn" id="3_1nq4j"]
+[ext_resource type="PackedScene" uid="uid://c1qje6djeqjf7" path="res://conveyor.tscn" id="4_icxse"]
+[ext_resource type="PackedScene" uid="uid://bunflqxjo8360" path="res://lazer.tscn" id="6_1nq4j"]
+[ext_resource type="PackedScene" uid="uid://c11wcg6v0j78l" path="res://key.tscn" id="7_s0pe5"]
+[ext_resource type="PackedScene" uid="uid://cenbf0jmp3xxl" path="res://door.tscn" id="8_2lfhk"]
+[ext_resource type="PackedScene" uid="uid://baubncy5lxxs0" path="res://flag.tscn" id="9_8m3p6"]
+[ext_resource type="PackedScene" uid="uid://dx4vsde7hjy42" path="res://clock.tscn" id="10_2lfhk"]
+[ext_resource type="PackedScene" uid="uid://bwvk8i6irqke2" path="res://level_21.tscn" id="10_8m3p6"]
+
+[node name="20" type="Node2D"]
+script = ExtResource("1_iq23b")
+
+[node name="Screenshot2025-08-01190045" type="Sprite2D" parent="."]
+modulate = Color(0.627451, 0.627451, 0.627451, 1)
+position = Vector2(24.5, -55.5)
+scale = Vector2(0.416205, 0.372736)
+texture = ExtResource("1_bjsal")
+
+[node name="Screenshot2025-08-01190044" type="Sprite2D" parent="."]
+modulate = Color(0.627451, 0.627451, 0.627451, 1)
+position = Vector2(-5614.83, -345.524)
+scale = Vector2(0.416205, 0.372736)
+texture = ExtResource("1_bjsal")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -5614.83
+offset_top = -345.524
+offset_right = -5411.83
+offset_bottom = -305.524
+text = "Level 19: Swap"
+
+[node name="TileMap_glow" parent="." instance=ExtResource("2_iq23b")]
+layer_0/tile_data = PackedInt32Array(-3, 327680, 0, 65533, 327680, 0, -2, 327680, 0, 65534, 327680, 0, -1, 327680, 0, 65535, 327680, 0, -65536, 327680, 0, 0, 327680, 0, -65535, 327680, 0, 1, 327680, 0, -65534, 327680, 0, 2, 327680, 0, 3, 327680, 0, 65532, 327680, 0, -327683, 327680, 0, -262147, 327680, 0, -196611, 327680, 0, -131075, 327680, 0, -65539, 327680, 0, -393216, 327680, 0, -393215, 327680, 0, -327679, 327680, 0, -262143, 327680, 0, -196607, 327680, 0, -131071, 327680, 0, -327682, 327680, 0, -327681, 327680, 0)
+
+[node name="TileMap" parent="." instance=ExtResource("3_1nq4j")]
+layer_0/tile_data = PackedInt32Array(-1, 262144, 0, 65535, 262144, 0, -65536, 262144, 0, 0, 262144, 0, -196609, 262144, 0, -131073, 262144, 0, -65537, 262144, 0, -65535, 262144, 0, 1, 262144, 0, -65534, 0, 0, 2, 262144, 0, -2, 196608, 0, 65534, 262144, 0, -3, 262144, 0, 65533, 262144, 0, 65532, 262144, 0, 3, 262144, 0, -196607, 262144, 0, -131071, 262144, 0, -262143, 262144, 0, -327679, 262144, 0, -327683, 196608, 0, -327682, 262144, 0, -327681, 262144, 0, -393216, 131072, 0, -393215, 262144, 0, -262147, 262144, 0, -196611, 262144, 0, -131075, 262144, 0, -65539, 262144, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-5, -80)
+zoom = Vector2(2.5, 2.5)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-121, 20)
+
+[node name="conveyor" parent="." instance=ExtResource("4_icxse")]
+position = Vector2(9, 20)
+up = true
+starter = true
+max_tick = 2
+
+[node name="conveyor2" parent="." instance=ExtResource("4_icxse")]
+position = Vector2(11, -15)
+up = true
+starter = true
+max_tick = 2
+
+[node name="conveyor3" parent="." instance=ExtResource("4_icxse")]
+position = Vector2(7, -47)
+up = true
+starter = true
+max_tick = 2
+
+[node name="conveyor4" parent="." instance=ExtResource("4_icxse")]
+position = Vector2(9, -77)
+up = true
+starter = true
+max_tick = 2
+
+[node name="conveyor5" parent="." instance=ExtResource("4_icxse")]
+position = Vector2(-55, -43)
+down = true
+starter = true
+max_tick = 1
+
+[node name="conveyor6" parent="." instance=ExtResource("4_icxse")]
+position = Vector2(71, -43)
+up = true
+starter = true
+max_tick = 1
+
+[node name="lazer" parent="." instance=ExtResource("6_1nq4j")]
+position = Vector2(-17, -111)
+direction = "cclock"
+facing = "down"
+max_tick = 1
+
+[node name="key" parent="." instance=ExtResource("7_s0pe5")]
+position = Vector2(-20, -172)
+door = NodePath("../door")
+
+[node name="door" parent="." instance=ExtResource("8_2lfhk")]
+position = Vector2(76, 21)
+
+[node name="flag" parent="." instance=ExtResource("9_8m3p6")]
+position = Vector2(106, 26)
+next_level = ExtResource("10_8m3p6")
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("10_2lfhk")]
+position = Vector2(148, -125)
+scale = Vector2(4, 4)
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = -197.0
+offset_top = -182.0
+offset_right = -60.0
+offset_bottom = -110.0
+text = "Level 20:
+One Way Entrance"

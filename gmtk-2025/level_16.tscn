@@ -1,0 +1,111 @@
+[gd_scene load_steps=13 format=3 uid="uid://coij5v8lxfvo8"]
+
+[ext_resource type="Script" uid="uid://35dga25qynfq" path="res://level_16.gd" id="1_v34xq"]
+[ext_resource type="Texture2D" uid="uid://b55qhsw6xqubd" path="res://Screenshot 2025-08-01 190044.png" id="1_yoxkb"]
+[ext_resource type="PackedScene" uid="uid://b7dv1lt3w3dpm" path="res://tile_map_glow.tscn" id="2_1knp7"]
+[ext_resource type="PackedScene" uid="uid://crgctx28ocx2" path="res://tile_map.tscn" id="3_ma1q0"]
+[ext_resource type="PackedScene" uid="uid://bunflqxjo8360" path="res://lazer.tscn" id="4_obttb"]
+[ext_resource type="PackedScene" uid="uid://cenbf0jmp3xxl" path="res://door.tscn" id="6_4pwwj"]
+[ext_resource type="PackedScene" uid="uid://c11wcg6v0j78l" path="res://key.tscn" id="7_3bass"]
+[ext_resource type="PackedScene" uid="uid://dgqrk2e7lefew" path="res://button.tscn" id="8_6tmng"]
+[ext_resource type="PackedScene" uid="uid://baubncy5lxxs0" path="res://flag.tscn" id="9_bol88"]
+[ext_resource type="PackedScene" uid="uid://dbcnlxqqr72vn" path="res://level_17.tscn" id="10_3bass"]
+[ext_resource type="PackedScene" uid="uid://c2cyjo1kgubph" path="res://enemy.tscn" id="10_i2vov"]
+[ext_resource type="PackedScene" uid="uid://dx4vsde7hjy42" path="res://clock.tscn" id="11_4pwwj"]
+
+[node name="level_16" type="Node2D"]
+script = ExtResource("1_v34xq")
+
+[node name="Screenshot2025-08-01190044" type="Sprite2D" parent="."]
+modulate = Color(0.625597, 0.625597, 0.625597, 1)
+position = Vector2(-48, -12)
+scale = Vector2(0.279432, 0.273594)
+texture = ExtResource("1_yoxkb")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-59, 1)
+zoom = Vector2(3, 3)
+
+[node name="TileMap_glow" parent="." instance=ExtResource("2_1knp7")]
+layer_0/tile_data = PackedInt32Array(3, 327680, 0, 2, 327680, 0, 1, 327680, 0, 0, 327680, 0, -65536, 327680, 0, -1, 327680, 0, -2, 327680, 0, 65533, 327680, 0, 65532, 327680, 0, -4, 327680, 0, -5, 327680, 0, 65531, 327680, 0, 65530, 327680, 0, -3, 327680, 0, -65535, 327680, 0, -196608, 327680, 0, -131072, 327680, 0, 65537, 327680, 0, 65536, 327680, 0, 131071, 327680, 0, 131070, 327680, 0, 131069, 327680, 0, 131068, 327680, 0, 131067, 327680, 0, 65535, 327680, 0, -65540, 327680, 0, 65534, 327680, 0, -131076, 327680, 0)
+
+[node name="TileMap" parent="." instance=ExtResource("3_ma1q0")]
+layer_0/tile_data = PackedInt32Array(-2, 262144, 0, 65534, 262144, 0, 131070, 262144, 0, -4, 262144, 0, 65532, 262144, 0, -3, 262144, 0, 65533, 262144, 0, 131069, 262144, 0, 131068, 262144, 0, -5, 262144, 0, 65531, 262144, 0, 131067, 262144, 0, 65530, 262144, 0, -65540, 262144, 0, -1, 262144, 0, 0, 262144, 0, 65536, 262144, 0, 131071, 262144, 0, 65535, 131072, 0, -65536, 262144, 0, 1, 196608, 0, 65537, 262144, 0, -65535, 0, 0, -131072, 262144, 0, -196608, 262144, 0, 2, 262144, 0, 3, 262144, 0, -131076, 262144, 0)
+
+[node name="lazer" parent="." instance=ExtResource("4_obttb")]
+position = Vector2(-86, 22)
+direction = "clock"
+facing = "left"
+max_tick = 2
+
+[node name="lazer2" parent="." instance=ExtResource("4_obttb")]
+position = Vector2(-85, 21)
+direction = "clock"
+facing = "right"
+max_tick = 2
+
+[node name="lazer3" parent="." instance=ExtResource("4_obttb")]
+position = Vector2(13, 19)
+direction = "cclock"
+facing = "right"
+max_tick = 2
+
+[node name="door" parent="." instance=ExtResource("6_4pwwj")]
+position = Vector2(-117, -44)
+
+[node name="door2" parent="." instance=ExtResource("6_4pwwj")]
+position = Vector2(10, -44)
+
+[node name="lazer4" parent="." instance=ExtResource("4_obttb")]
+position = Vector2(13, 21)
+direction = "cclock"
+facing = "left"
+max_tick = 2
+
+[node name="key" parent="." instance=ExtResource("7_3bass")]
+position = Vector2(9, -77)
+door = NodePath("../door3")
+
+[node name="door3" parent="." instance=ExtResource("6_4pwwj")]
+position = Vector2(77, 21)
+
+[node name="button" parent="." instance=ExtResource("8_6tmng")]
+position = Vector2(-154, -14)
+door = NodePath("../door")
+
+[node name="button2" parent="." instance=ExtResource("8_6tmng")]
+position = Vector2(-118, -78)
+door = NodePath("../door2")
+
+[node name="flag" parent="." instance=ExtResource("9_bol88")]
+position = Vector2(105, 25)
+next_level = ExtResource("10_3bass")
+
+[node name="enemy" parent="." instance=ExtResource("10_i2vov")]
+position = Vector2(-118, 55)
+right = false
+up = true
+moves = 4
+max_tick = 1
+
+[node name="door4" parent="." instance=ExtResource("6_4pwwj")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-122, 82)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-184, 24)
+
+[node name="door5" parent="." instance=ExtResource("6_4pwwj")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-122, -108)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -179.0
+offset_top = 73.0
+offset_right = 107.0
+offset_bottom = 142.0
+text = "Level 17: Three Step authentication"
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("11_4pwwj")]
+position = Vector2(-52, -68)
+scale = Vector2(2, 2)

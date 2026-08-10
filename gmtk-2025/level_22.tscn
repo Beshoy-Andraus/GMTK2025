@@ -1,0 +1,181 @@
+[gd_scene format=3 uid="uid://bkxkp0m33kqpv"]
+
+[ext_resource type="Script" uid="uid://b422705mygt20" path="res://level_22.gd" id="1_yeci1"]
+[ext_resource type="PackedScene" uid="uid://b7dv1lt3w3dpm" path="res://tile_map_glow.tscn" id="2_lmde5"]
+[ext_resource type="Texture2D" uid="uid://b55qhsw6xqubd" path="res://Screenshot 2025-08-01 190044.png" id="2_ocb37"]
+[ext_resource type="PackedScene" uid="uid://crgctx28ocx2" path="res://tile_map.tscn" id="3_laqjg"]
+[ext_resource type="PackedScene" uid="uid://fiw4sgcpr6wy" path="res://spinner.tscn" id="4_eer6t"]
+[ext_resource type="PackedScene" uid="uid://bunflqxjo8360" path="res://lazer.tscn" id="5_ocb37"]
+[ext_resource type="PackedScene" uid="uid://c11wcg6v0j78l" path="res://key.tscn" id="7_uj8dn"]
+[ext_resource type="PackedScene" uid="uid://cenbf0jmp3xxl" path="res://door.tscn" id="8_si66y"]
+[ext_resource type="PackedScene" uid="uid://baubncy5lxxs0" path="res://flag.tscn" id="9_o0khm"]
+[ext_resource type="PackedScene" uid="uid://cf4q06svj7fst" path="res://level_23.tscn" id="10_si66y"]
+[ext_resource type="PackedScene" uid="uid://dx4vsde7hjy42" path="res://clock.tscn" id="11_o0khm"]
+
+[node name="level_22" type="Node2D" unique_id=1529591835]
+script = ExtResource("1_yeci1")
+
+[node name="Screenshot2025-08-01190044" type="Sprite2D" parent="." unique_id=2034016894]
+modulate = Color(0.627451, 0.627451, 0.627451, 1)
+position = Vector2(73, 39)
+scale = Vector2(0.481994, 0.470925)
+texture = ExtResource("2_ocb37")
+
+[node name="TileMap_glow" parent="." unique_id=1476046583 instance=ExtResource("2_lmde5")]
+layer_0/tile_data = PackedInt32Array(-327685, 327680, 0, -262149, 327680, 0, -196613, 327680, 0, -131077, 327680, 0, -65541, 327680, 0, -5, 327680, 0, 65531, 327680, 0, 131067, 327680, 0, 196603, 327680, 0, 262139, 327680, 0, 327675, 327680, 0, -327684, 327680, 0, -262148, 327680, 0, -196612, 327680, 0, -131076, 327680, 0, -65540, 327680, 0, -4, 327680, 0, 65532, 327680, 0, 131068, 327680, 0, 196604, 327680, 0, 262140, 327680, 0, 327676, 327680, 0, -327683, 327680, 0, -262147, 327680, 0, -196611, 327680, 0, -131075, 327680, 0, -65539, 327680, 0, -3, 327680, 0, 65533, 327680, 0, 131069, 327680, 0, 196605, 327680, 0, 262141, 327680, 0, 327677, 327680, 0, -327682, 327680, 0, -262146, 327680, 0, -196610, 327680, 0, -131074, 327680, 0, -65538, 327680, 0, -2, 327680, 0, 65534, 327680, 0, 131070, 327680, 0, 196606, 327680, 0, 262142, 327680, 0, 327678, 327680, 0, -327681, 327680, 0, -262145, 327680, 0, -196609, 327680, 0, -131073, 327680, 0, -65537, 327680, 0, -1, 327680, 0, 65535, 327680, 0, 131071, 327680, 0, 196607, 327680, 0, 262143, 327680, 0, 327679, 327680, 0, -393216, 327680, 0, -327680, 327680, 0, -262144, 327680, 0, -196608, 327680, 0, -131072, 327680, 0, -65536, 327680, 0, 0, 327680, 0, 65536, 327680, 0, 131072, 327680, 0, 196608, 327680, 0, 262144, 327680, 0, -393215, 327680, 0, -327679, 327680, 0, -262143, 327680, 0, -196607, 327680, 0, -131071, 327680, 0, -65535, 327680, 0, 1, 327680, 0, 65537, 327680, 0, 131073, 327680, 0, 196609, 327680, 0, 262145, 327680, 0, -393214, 327680, 0, -327678, 327680, 0, -262142, 327680, 0, -196606, 327680, 0, -131070, 327680, 0, -65534, 327680, 0, 2, 327680, 0, 65538, 327680, 0, 131074, 327680, 0, 196610, 327680, 0, 262146, 327680, 0, -393213, 327680, 0, -327677, 327680, 0, -262141, 327680, 0, -196605, 327680, 0, -131069, 327680, 0, -65533, 327680, 0, 3, 327680, 0, 65539, 327680, 0, 131075, 327680, 0, 196611, 327680, 0, 262147, 327680, 0, -393212, 327680, 0, -327676, 327680, 0, -262140, 327680, 0, -196604, 327680, 0, -131068, 327680, 0, -65532, 327680, 0, 4, 327680, 0, 65540, 327680, 0, 131076, 327680, 0, 196612, 327680, 0, 262148, 327680, 0, -393211, 327680, 0, -327675, 327680, 0, -262139, 327680, 0, -196603, 327680, 0, -131067, 327680, 0, -65531, 327680, 0, 5, 327680, 0, 65541, 327680, 0, 131077, 327680, 0, 196613, 327680, 0, 262149, 327680, 0, -7, 327680, 0, -6, 327680, 0, -8, 327680, 0)
+
+[node name="TileMap" parent="." unique_id=820942616 instance=ExtResource("3_laqjg")]
+layer_0/tile_data = PackedInt32Array(-1, 262144, 0, 65535, 65536, 0, -65536, 262144, 0, 0, 262144, 0, -65537, 65536, 0, -131072, 262144, 0, -131071, 65536, 0, -65535, 262144, 0, 1, 65536, 0, -131074, 262144, 0, -65538, 262144, 0, -2, 262144, 0, 65534, 262144, 0, 131070, 262144, 0, -131073, 262144, 0, 131071, 262144, 0, -196608, 196608, 0, 65536, 262144, 0, -196607, 262144, 0, 65537, 262144, 0, -196606, 262144, 0, -131070, 262144, 0, -65534, 262144, 0, 2, 262144, 0, 65538, 262144, 0, -196611, 262144, 0, -131075, 262144, 0, -65539, 262144, 0, -3, 262144, 0, 65533, 262144, 0, 131069, 262144, 0, 196605, 262144, 0, -196610, 262144, 0, 196606, 262144, 0, -196609, 262144, 0, 196607, 262144, 0, -262144, 262144, 0, 131072, 262144, 0, -262143, 262144, 0, 131073, 262144, 0, -262142, 262144, 0, 131074, 262144, 0, -262141, 262144, 0, -196605, 262144, 0, -131069, 262144, 0, -65533, 262144, 0, 3, 262144, 0, 65539, 262144, 0, 131075, 262144, 0, -262148, 262144, 0, -196612, 262144, 0, -131076, 262144, 0, -65540, 262144, 0, -4, 262144, 0, 65532, 196608, 0, 131068, 262144, 0, 196604, 262144, 0, 262140, 262144, 0, -262147, 262144, 0, 262141, 262144, 0, -262146, 262144, 0, 262142, 262144, 0, -262145, 262144, 0, 262143, 262144, 0, -327680, 262144, 0, 196608, 262144, 0, -327679, 262144, 0, 196609, 0, 0, -327678, 262144, 0, 196610, 262144, 0, -327677, 262144, 0, 196611, 262144, 0, -327676, 262144, 0, -262140, 262144, 0, -196604, 262144, 0, -131068, 0, 0, -65532, 262144, 0, 4, 262144, 0, 65540, 262144, 0, 131076, 262144, 0, 196612, 262144, 0, -327685, 262144, 0, -262149, 262144, 0, -196613, 262144, 0, -131077, 262144, 0, -65541, 262144, 0, -5, 262144, 0, 65531, 262144, 0, 131067, 262144, 0, 196603, 262144, 0, 262139, 262144, 0, 327675, 262144, 0, -327684, 262144, 0, 327676, 262144, 0, -327683, 262144, 0, 327677, 262144, 0, -327682, 262144, 0, 327678, 262144, 0, -327681, 262144, 0, 327679, 262144, 0, -393216, 262144, 0, 262144, 262144, 0, -393215, 262144, 0, 262145, 262144, 0, -393214, 262144, 0, 262146, 262144, 0, -393213, 262144, 0, 262147, 262144, 0, -393212, 196608, 0, 262148, 262144, 0, -393211, 262144, 0, -327675, 262144, 0, -262139, 262144, 0, -196603, 262144, 0, -131067, 262144, 0, -65531, 262144, 0, 5, 262144, 0, 65541, 262144, 0, 131077, 262144, 0, 196613, 262144, 0, 262149, 262144, 0, -7, 262144, 0, -6, 262144, 0, -8, 262144, 0)
+
+[node name="spinner" parent="." unique_id=245172086 instance=ExtResource("4_eer6t")]
+position = Vector2(-147, 148)
+direction = "clock"
+size = 10
+facing = "up"
+max_tick = 1
+
+[node name="spinner2" parent="." unique_id=1909941001 instance=ExtResource("4_eer6t")]
+position = Vector2(-118, 116)
+direction = "cclock"
+size = 8
+facing = "right"
+max_tick = 1
+
+[node name="spinner3" parent="." unique_id=1143364300 instance=ExtResource("4_eer6t")]
+position = Vector2(-82, 83)
+direction = "clock"
+size = 6
+facing = "up"
+max_tick = 1
+
+[node name="spinner4" parent="." unique_id=456469303 instance=ExtResource("4_eer6t")]
+position = Vector2(-54, 49)
+direction = "cclock"
+size = 4
+facing = "right"
+max_tick = 1
+
+[node name="spinner5" parent="." unique_id=634310007 instance=ExtResource("4_eer6t")]
+position = Vector2(-155, -171)
+direction = "clock"
+size = 10
+facing = "right"
+max_tick = 1
+
+[node name="spinner6" parent="." unique_id=1920198966 instance=ExtResource("4_eer6t")]
+position = Vector2(-119, -135)
+direction = "cclock"
+size = 8
+facing = "down"
+max_tick = 1
+
+[node name="spinner7" parent="." unique_id=1635690918 instance=ExtResource("4_eer6t")]
+position = Vector2(-85, -106)
+direction = "clock"
+size = 6
+facing = "right"
+max_tick = 1
+
+[node name="spinner8" parent="." unique_id=1072149248 instance=ExtResource("4_eer6t")]
+position = Vector2(-51, -76)
+direction = "cclock"
+size = 4
+facing = "down"
+max_tick = 1
+
+[node name="spinner9" parent="." unique_id=544508548 instance=ExtResource("4_eer6t")]
+position = Vector2(168, -170)
+direction = "clock"
+size = 10
+facing = "down"
+max_tick = 1
+
+[node name="spinner10" parent="." unique_id=907316930 instance=ExtResource("4_eer6t")]
+position = Vector2(173, 148)
+direction = "clock"
+size = 10
+facing = "left"
+max_tick = 1
+
+[node name="spinner11" parent="." unique_id=1090924696 instance=ExtResource("4_eer6t")]
+position = Vector2(139, -138)
+direction = "cclock"
+size = 8
+facing = "left"
+max_tick = 1
+
+[node name="spinner12" parent="." unique_id=1624874491 instance=ExtResource("4_eer6t")]
+position = Vector2(139, 117)
+direction = "cclock"
+size = 8
+facing = "up"
+max_tick = 1
+
+[node name="spinner13" parent="." unique_id=869253297 instance=ExtResource("4_eer6t")]
+position = Vector2(110, -107)
+direction = "clock"
+size = 6
+facing = "down"
+max_tick = 1
+
+[node name="spinner14" parent="." unique_id=938762972 instance=ExtResource("4_eer6t")]
+position = Vector2(108, 83)
+direction = "clock"
+size = 6
+facing = "left"
+max_tick = 1
+
+[node name="spinner15" parent="." unique_id=1580531605 instance=ExtResource("4_eer6t")]
+position = Vector2(73, 52)
+direction = "cclock"
+size = 4
+facing = "up"
+max_tick = 1
+
+[node name="spinner16" parent="." unique_id=1503865875 instance=ExtResource("4_eer6t")]
+position = Vector2(74, -75)
+direction = "cclock"
+size = 4
+facing = "left"
+max_tick = 1
+
+[node name="lazer" parent="." unique_id=147046376 instance=ExtResource("5_ocb37")]
+position = Vector2(11, -11)
+direction = "cclock"
+facing = "right"
+max_tick = 1
+
+[node name="lazer2" parent="." unique_id=560817820 instance=ExtResource("5_ocb37")]
+position = Vector2(10, -13)
+direction = "clock"
+facing = "right"
+max_tick = 1
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=868286434]
+position = Vector2(-187, -6)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=227344515]
+position = Vector2(51, -16)
+zoom = Vector2(1.8, 1.8)
+
+[node name="key" parent="." unique_id=2147482800 instance=ExtResource("7_uj8dn")]
+position = Vector2(40, -10)
+door = NodePath("../door")
+
+[node name="door" parent="." unique_id=1374036895 instance=ExtResource("8_si66y")]
+position = Vector2(-215, -12)
+
+[node name="flag" parent="." unique_id=258160429 instance=ExtResource("9_o0khm")]
+position = Vector2(-246, -8)
+next_level = ExtResource("10_si66y")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=877252286]
+offset_left = 219.0
+offset_top = 64.0
+offset_right = 422.0
+offset_bottom = 104.0
+text = "Level 22: Highway"
+
+[node name="AnimatedSprite2D" parent="." unique_id=148242504 instance=ExtResource("11_o0khm")]
+position = Vector2(271, -59)
+scale = Vector2(4, 4)

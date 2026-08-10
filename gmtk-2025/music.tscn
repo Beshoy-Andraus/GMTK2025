@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvjg2bdpybd2y"]
+
+[ext_resource type="Script" uid="uid://b2vnwpjwklrta" path="res://music.gd" id="1_w5q55"]
+[ext_resource type="AudioStream" uid="uid://4upjkdbyn6an" path="res://A Lonely Robot.ogg" id="3_khlsn"]
+[ext_resource type="AudioStream" uid="uid://kc5tcgpleyer" path="res://Above the Clouds 8-Bit.ogg" id="3_lr66j"]
+[ext_resource type="AudioStream" uid="uid://c05ibam7uqojj" path="res://Robot Town.ogg" id="4_khlsn"]
+
+[node name="music" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_w5q55")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_khlsn")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_lr66j")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_khlsn")
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
+[connection signal="finished" from="AudioStreamPlayer2" to="." method="_on_audio_stream_player_2_finished"]
+[connection signal="finished" from="AudioStreamPlayer3" to="." method="_on_audio_stream_player_3_finished"]

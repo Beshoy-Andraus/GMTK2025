@@ -1,0 +1,94 @@
+[gd_scene load_steps=9 format=3 uid="uid://bfukvinvwjvou"]
+
+[ext_resource type="Texture2D" uid="uid://b55qhsw6xqubd" path="res://Screenshot 2025-08-01 190044.png" id="1_48hld"]
+[ext_resource type="Script" uid="uid://chvhijrkuc0xk" path="res://level_4.gd" id="1_l45re"]
+[ext_resource type="PackedScene" uid="uid://b7dv1lt3w3dpm" path="res://tile_map_glow.tscn" id="2_l45re"]
+[ext_resource type="PackedScene" uid="uid://crgctx28ocx2" path="res://tile_map.tscn" id="3_c8stx"]
+[ext_resource type="PackedScene" uid="uid://c2cyjo1kgubph" path="res://enemy.tscn" id="4_aqy51"]
+[ext_resource type="PackedScene" uid="uid://baubncy5lxxs0" path="res://flag.tscn" id="6_c8stx"]
+[ext_resource type="PackedScene" uid="uid://dx4vsde7hjy42" path="res://clock.tscn" id="7_aqy51"]
+[ext_resource type="PackedScene" uid="uid://dtfmp4cqvenwh" path="res://level_5.tscn" id="7_s24i2"]
+
+[node name="level_4" type="Node2D"]
+script = ExtResource("1_l45re")
+
+[node name="Screenshot2025-08-01190044" type="Sprite2D" parent="."]
+modulate = Color(0.625597, 0.625597, 0.625597, 1)
+position = Vector2(-20, 7)
+scale = Vector2(0.445291, 0.393708)
+texture = ExtResource("1_48hld")
+
+[node name="TileMap_glow" parent="." instance=ExtResource("2_l45re")]
+layer_0/tile_data = PackedInt32Array(-262146, 327680, 0, -196610, 327680, 0, -131074, 327680, 0, -65538, 327680, 0, -2, 327680, 0, 65534, 327680, 0, 131070, 327680, 0, 196606, 327680, 0, 262142, 327680, 0, 327678, 327680, 0, -262145, 327680, 0, -196609, 327680, 0, -131073, 327680, 0, -65537, 327680, 0, -1, 327680, 0, 65535, 327680, 0, 131071, 327680, 0, 196607, 327680, 0, 262143, 327680, 0, 327679, 327680, 0, -327680, 327680, 0, -262144, 327680, 0, -196608, 327680, 0, -131072, 327680, 0, -65536, 327680, 0, 0, 327680, 0, 65536, 327680, 0, 131072, 327680, 0, 196608, 327680, 0, 262144, 327680, 0, -327679, 327680, 0, -262143, 327680, 0, -196607, 327680, 0, -131071, 327680, 0, -65535, 327680, 0, 1, 327680, 0, 65537, 327680, 0, 131073, 327680, 0, 196609, 327680, 0, 262145, 327680, 0, 262146, 327680, 0, -262147, 327680, 0)
+
+[node name="TileMap" parent="." instance=ExtResource("3_c8stx")]
+layer_0/tile_data = PackedInt32Array(-1, 196608, 0, -65536, 262144, 0, -65535, 262144, 0, -2, 262144, 0, -262146, 262144, 0, -196610, 262144, 0, -131074, 262144, 0, -65538, 262144, 0, 65534, 262144, 0, 131070, 262144, 0, 196606, 262144, 0, 262142, 262144, 0, -262145, 262144, 0, -196609, 262144, 0, -131073, 262144, 0, -65537, 262144, 0, 65535, 262144, 0, 131071, 262144, 0, 196607, 262144, 0, 262143, 0, 0, -327680, 262144, 0, -262144, 262144, 0, -196608, 262144, 0, -131072, 262144, 0, 0, 262144, 0, 65536, 262144, 0, 131072, 262144, 0, 196608, 262144, 0, -327679, 196608, 0, -262143, 262144, 0, -196607, 262144, 0, -131071, 262144, 0, 1, 262144, 0, 65537, 262144, 0, 131073, 262144, 0, 196609, 262144, 0, 327678, 262144, 0, 327679, 131072, 0, 262145, 0, 0, 262144, 262144, 0, -262147, 262144, 0, 262146, 262144, 0)
+
+[node name="enemy" parent="." instance=ExtResource("4_aqy51")]
+position = Vector2(-53, -106)
+moves = 1
+max_tick = 1
+
+[node name="enemy2" parent="." instance=ExtResource("4_aqy51")]
+position = Vector2(42, -105)
+left = true
+right = false
+moves = 1
+max_tick = 1
+
+[node name="enemy3" parent="." instance=ExtResource("4_aqy51")]
+position = Vector2(-21, -45)
+left = true
+right = false
+moves = 1
+max_tick = 1
+
+[node name="enemy4" parent="." instance=ExtResource("4_aqy51")]
+position = Vector2(13, -42)
+moves = 1
+max_tick = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="enemy5" parent="." instance=ExtResource("4_aqy51")]
+position = Vector2(-55, 20)
+moves = 1
+max_tick = 1
+
+[node name="enemy6" parent="." instance=ExtResource("4_aqy51")]
+position = Vector2(40, 22)
+left = true
+right = false
+moves = 1
+max_tick = 1
+
+[node name="enemy7" parent="." instance=ExtResource("4_aqy51")]
+position = Vector2(11, 86)
+moves = 1
+max_tick = 1
+
+[node name="enemy8" parent="." instance=ExtResource("4_aqy51")]
+position = Vector2(-23, 84)
+left = true
+right = false
+moves = 1
+max_tick = 1
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-88, -137)
+
+[node name="flag" parent="." instance=ExtResource("6_c8stx")]
+position = Vector2(76, 151)
+next_level = ExtResource("7_s24i2")
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("7_aqy51")]
+position = Vector2(170, -21)
+scale = Vector2(6, 6)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 76.0
+offset_top = -157.0
+offset_right = 203.0
+offset_bottom = -117.0
+text = "Level 4: DNA"

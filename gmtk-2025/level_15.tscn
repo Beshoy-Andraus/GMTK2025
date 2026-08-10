@@ -1,0 +1,70 @@
+[gd_scene load_steps=12 format=3 uid="uid://bkkfgeshjcb6x"]
+
+[ext_resource type="Script" uid="uid://ciss8xh0gf78c" path="res://level_15.gd" id="1_7q1aj"]
+[ext_resource type="PackedScene" uid="uid://crgctx28ocx2" path="res://tile_map.tscn" id="2_mf8r6"]
+[ext_resource type="Texture2D" uid="uid://b55qhsw6xqubd" path="res://Screenshot 2025-08-01 190044.png" id="2_r3kyx"]
+[ext_resource type="PackedScene" uid="uid://b7dv1lt3w3dpm" path="res://tile_map_glow.tscn" id="3_r3kyx"]
+[ext_resource type="PackedScene" uid="uid://bunflqxjo8360" path="res://lazer.tscn" id="4_ojr5k"]
+[ext_resource type="PackedScene" uid="uid://dgqrk2e7lefew" path="res://button.tscn" id="5_hyenc"]
+[ext_resource type="PackedScene" uid="uid://fiw4sgcpr6wy" path="res://spinner.tscn" id="6_nhg76"]
+[ext_resource type="PackedScene" uid="uid://cenbf0jmp3xxl" path="res://door.tscn" id="7_fi1vt"]
+[ext_resource type="PackedScene" uid="uid://baubncy5lxxs0" path="res://flag.tscn" id="8_p5j5u"]
+[ext_resource type="PackedScene" uid="uid://dx4vsde7hjy42" path="res://clock.tscn" id="9_mf8r6"]
+[ext_resource type="PackedScene" uid="uid://coij5v8lxfvo8" path="res://level_16.tscn" id="10_ojr5k"]
+
+[node name="level_15" type="Node2D"]
+script = ExtResource("1_7q1aj")
+
+[node name="Screenshot2025-08-01190044" type="Sprite2D" parent="."]
+modulate = Color(0.625597, 0.625597, 0.625597, 1)
+position = Vector2(-88.9375, 9)
+scale = Vector2(0.408501, 0.394662)
+texture = ExtResource("2_r3kyx")
+
+[node name="TileMap" parent="." instance=ExtResource("2_mf8r6")]
+layer_0/tile_data = PackedInt32Array(-1, 262144, 0, 65535, 262144, 0, -65536, 262144, 0, 0, 262144, 0, -65537, 262144, 0, 131071, 262144, 0, -131072, 262144, 0, 65536, 262144, 0, -131071, 262144, 0, -65535, 262144, 0, 1, 262144, 0, 65537, 262144, 0, -65538, 262144, 0, -2, 262144, 0, 65534, 262144, 0, 131070, 196608, 0, -131070, 262144, 0, -65534, 262144, 0, 2, 0, 0, 65538, 262144, 0, -131074, 262144, 0, -131073, 262144, 0, -196608, 131072, 0, -196607, 262144, 0, -196606, 196608, 0, 196606, 262144, 0, 196607, 262144, 0, 131072, 262144, 0, 131073, 262144, 0, 131074, 262144, 0, -262144, 262144, 0, 196608, 262144, 0, 262144, 262144, 0, -327680, 262144, 0)
+
+[node name="TileMap_glow" parent="." instance=ExtResource("3_r3kyx")]
+layer_0/tile_data = PackedInt32Array(-262144, 327680, 0, -196608, 327680, 0, -131072, 327680, 0, -65536, 327680, 0, 0, 327680, 0, 65536, 327680, 0, 131072, 327680, 0, -131074, 327680, 0, -65538, 327680, 0, -2, 327680, 0, 65534, 327680, 0, 131070, 327680, 0, 196606, 327680, 0, -131073, 327680, 0, -65537, 327680, 0, -1, 327680, 0, 65535, 327680, 0, 131071, 327680, 0, 196607, 327680, 0, -196607, 327680, 0, -131071, 327680, 0, -65535, 327680, 0, 1, 327680, 0, 65537, 327680, 0, 131073, 327680, 0, -196606, 327680, 0, -131070, 327680, 0, -65534, 327680, 0, 2, 327680, 0, 65538, 327680, 0, 131074, 327680, 0, 196608, 327680, 0, 262144, 327680, 0, -327680, 327680, 0)
+
+[node name="lazer" parent="." instance=ExtResource("4_ojr5k")]
+position = Vector2(11, -14)
+direction = "clock"
+facing = "up"
+max_tick = 2
+
+[node name="button" parent="." instance=ExtResource("5_hyenc")]
+position = Vector2(43, 82)
+door = NodePath("../door")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(7, -137)
+
+[node name="spinner" parent="." instance=ExtResource("6_nhg76")]
+position = Vector2(-49, -46)
+direction = "clock"
+size = 4
+facing = "right"
+max_tick = 1
+
+[node name="door" parent="." instance=ExtResource("7_fi1vt")]
+position = Vector2(13, 115)
+
+[node name="flag" parent="." instance=ExtResource("8_p5j5u")]
+position = Vector2(7, 152)
+next_level = ExtResource("10_ojr5k")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-91, 0)
+zoom = Vector2(2, 2)
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("9_mf8r6")]
+position = Vector2(-213, -45)
+scale = Vector2(6, 6)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -325.0
+offset_top = 66.0
+offset_right = -91.0
+offset_bottom = 135.0
+text = "Level 16:  Lasers and Buttons"

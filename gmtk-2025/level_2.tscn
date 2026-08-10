@@ -1,0 +1,92 @@
+[gd_scene load_steps=9 format=3 uid="uid://buyqbd6c3ggjo"]
+
+[ext_resource type="Script" uid="uid://dckve2mauohj" path="res://level_2.gd" id="1_n7ypv"]
+[ext_resource type="PackedScene" uid="uid://b7dv1lt3w3dpm" path="res://tile_map_glow.tscn" id="2_0s5r2"]
+[ext_resource type="Texture2D" uid="uid://b55qhsw6xqubd" path="res://Screenshot 2025-08-01 190044.png" id="2_7j8ne"]
+[ext_resource type="PackedScene" uid="uid://crgctx28ocx2" path="res://tile_map.tscn" id="3_7j8ne"]
+[ext_resource type="PackedScene" uid="uid://c2cyjo1kgubph" path="res://enemy.tscn" id="3_n7ypv"]
+[ext_resource type="PackedScene" uid="uid://dx4vsde7hjy42" path="res://clock.tscn" id="6_7dov7"]
+[ext_resource type="PackedScene" uid="uid://baubncy5lxxs0" path="res://flag.tscn" id="7_7dov7"]
+[ext_resource type="PackedScene" uid="uid://doxdmpallby2y" path="res://level_3.tscn" id="8_ehv2h"]
+
+[node name="level_2" type="Node2D"]
+script = ExtResource("1_n7ypv")
+
+[node name="Screenshot2025-08-01190044" type="Sprite2D" parent="."]
+modulate = Color(0.627451, 0.627451, 0.627451, 1)
+position = Vector2(8.62501, 61.1875)
+scale = Vector2(0.463123, 0.436249)
+texture = ExtResource("2_7j8ne")
+
+[node name="TileMap_glow" parent="." instance=ExtResource("2_0s5r2")]
+layer_0/tile_data = PackedInt32Array(-196609, 327680, 0, -131073, 327680, 0, -65537, 327680, 0, -1, 327680, 0, 65535, 327680, 0, 131071, 327680, 0, 196607, 327680, 0, 262143, 327680, 0, 327679, 327680, 0, -262144, 327680, 0, -196608, 327680, 0, -131072, 327680, 0, -65536, 327680, 0, 0, 327680, 0, 65536, 327680, 0, 131072, 327680, 0, 196608, 327680, 0, 262144, 327680, 0, 327680, 327680, 0, -262143, 327680, 0, -131071, 327680, 0, 1, 327680, 0, 131073, 327680, 0, 262145, 327680, 0, -327680, 327680, 0)
+
+[node name="TileMap" parent="." instance=ExtResource("3_7j8ne")]
+layer_0/tile_data = PackedInt32Array(-262144, 262144, 0, -196608, 262144, 0, -131072, 262144, 0, -65536, 262144, 0, 0, 262144, 0, 65536, 262144, 0, 131072, 0, 0, 196608, 262144, 0, 262144, 262144, 0, 327680, 262144, 0, -327680, 196608, 0, -131073, 262144, 0, -196609, 262144, 0, -65537, 262144, 0, -1, 262144, 0, 65535, 131072, 0, 131071, 262144, 0, 196607, 262144, 0, 262143, 196608, 0, 327679, 262144, 0, -262143, 0, 0, -131071, 131072, 0, 1, 262144, 0, 131073, 262144, 0, 262145, 196608, 0)
+
+[node name="enemy" parent="." instance=ExtResource("3_n7ypv")]
+position = Vector2(-20, -74)
+moves = 1
+max_tick = 2
+
+[node name="enemy2" parent="." instance=ExtResource("3_n7ypv")]
+position = Vector2(5, 153)
+moves = 1
+max_tick = 2
+
+[node name="enemy3" parent="." instance=ExtResource("3_n7ypv")]
+position = Vector2(6, -44)
+moves = 1
+max_tick = 2
+
+[node name="enemy4" parent="." instance=ExtResource("3_n7ypv")]
+position = Vector2(-19, -12)
+moves = 1
+max_tick = 2
+
+[node name="enemy5" parent="." instance=ExtResource("3_n7ypv")]
+position = Vector2(7, 23)
+moves = 1
+max_tick = 2
+
+[node name="enemy6" parent="." instance=ExtResource("3_n7ypv")]
+position = Vector2(-26, 120)
+moves = 1
+max_tick = 2
+
+[node name="enemy7" parent="." instance=ExtResource("3_n7ypv")]
+position = Vector2(6, 89)
+moves = 1
+max_tick = 2
+
+[node name="enemy8" parent="." instance=ExtResource("3_n7ypv")]
+position = Vector2(-21, 54)
+moves = 1
+max_tick = 2
+
+[node name="enemy9" parent="." instance=ExtResource("3_n7ypv")]
+position = Vector2(9, -108)
+moves = 1
+max_tick = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 17)
+zoom = Vector2(1.8, 1.8)
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("6_7dov7")]
+position = Vector2(149, 1)
+scale = Vector2(4, 4)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(8, -138)
+
+[node name="flag" parent="." instance=ExtResource("7_7dov7")]
+position = Vector2(12, 183)
+next_level = ExtResource("8_ehv2h")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 65.0
+offset_top = -160.0
+offset_right = 239.0
+offset_bottom = -120.0
+text = "Level 2: Tuck & Roll"

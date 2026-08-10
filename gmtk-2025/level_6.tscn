@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://be41eo0bbb2xm"]
+
+[ext_resource type="Script" uid="uid://bxa0m5a7y1ead" path="res://level_6.gd" id="1_brkdw"]
+[ext_resource type="Texture2D" uid="uid://b55qhsw6xqubd" path="res://Screenshot 2025-08-01 190044.png" id="1_ixf42"]
+[ext_resource type="PackedScene" uid="uid://b7dv1lt3w3dpm" path="res://tile_map_glow.tscn" id="2_brkdw"]
+[ext_resource type="PackedScene" uid="uid://crgctx28ocx2" path="res://tile_map.tscn" id="3_soim0"]
+[ext_resource type="PackedScene" uid="uid://c11wcg6v0j78l" path="res://key.tscn" id="5_3eqwd"]
+[ext_resource type="PackedScene" uid="uid://baubncy5lxxs0" path="res://flag.tscn" id="6_xo623"]
+[ext_resource type="PackedScene" uid="uid://36m5v8rh3bn7" path="res://level_7.tscn" id="7_brkdw"]
+[ext_resource type="PackedScene" uid="uid://cenbf0jmp3xxl" path="res://door.tscn" id="7_ejlf8"]
+
+[node name="level_6" type="Node2D"]
+script = ExtResource("1_brkdw")
+
+[node name="Screenshot2025-08-01190044" type="Sprite2D" parent="."]
+modulate = Color(0.625597, 0.625597, 0.625597, 1)
+position = Vector2(3.00001, 20)
+scale = Vector2(0.320637, 0.294566)
+texture = ExtResource("1_ixf42")
+
+[node name="TileMap_glow" parent="." instance=ExtResource("2_brkdw")]
+layer_0/tile_data = PackedInt32Array(131072, 327680, 0, 196608, 327680, 0, -131074, 327680, 0, -65538, 327680, 0, -2, 327680, 0, 65534, 327680, 0, 131070, 327680, 0, -131073, 327680, 0, -65537, 327680, 0, -1, 327680, 0, 65535, 327680, 0, 131071, 327680, 0, -196608, 327680, 0, -131072, 327680, 0, -65536, 327680, 0, 0, 327680, 0, 65536, 327680, 0, -196607, 327680, 0, -131071, 327680, 0, -65535, 327680, 0, 1, 327680, 0, 65537, 327680, 0, -196606, 327680, 0, -131070, 327680, 0, -65534, 327680, 0, 2, 327680, 0, 65538, 327680, 0)
+
+[node name="TileMap" parent="." instance=ExtResource("3_soim0")]
+layer_0/tile_data = PackedInt32Array(-1, 262144, 0, 65535, 262144, 0, -65536, 262144, 0, 0, 262144, 0, -65538, 262144, 0, -2, 262144, 0, 65534, 196608, 0, 131070, 262144, 0, -65537, 262144, 0, 131071, 262144, 0, -131072, 262144, 0, 65536, 262144, 0, -131071, 0, 0, -65535, 262144, 0, 1, 131072, 0, 65537, 262144, 0, -131074, 262144, 0, -131073, 262144, 0, -196608, 262144, 0, 131072, 262144, 0, -196607, 262144, 0, -196606, 196608, 0, -131070, 262144, 0, -65534, 262144, 0, 2, 262144, 0, 65538, 262144, 0, 196608, 262144, 0)
+
+[node name="key" parent="." instance=ExtResource("5_3eqwd")]
+position = Vector2(9, -13)
+door = NodePath("../door")
+
+[node name="flag" parent="." instance=ExtResource("6_xo623")]
+position = Vector2(11, 116)
+next_level = ExtResource("7_brkdw")
+
+[node name="door" parent="." instance=ExtResource("7_ejlf8")]
+position = Vector2(14, 83)
+dir_up = true
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(6, -71)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-2, 14)
+zoom = Vector2(2.7, 2.7)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -176.0
+offset_top = -96.0
+offset_right = -52.0
+offset_bottom = -56.0
+text = "Level 6: A Key"

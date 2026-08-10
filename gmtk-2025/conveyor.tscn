@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1qje6djeqjf7"]
+
+[ext_resource type="Script" uid="uid://birvu74x1h35d" path="res://conveyor.gd" id="1_wo26x"]
+[ext_resource type="Texture2D" uid="uid://75dawt0xyn66" path="res://convSprite-0003.png" id="2_wo26x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m44ft"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jdux"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nyola"]
+atlas = ExtResource("2_wo26x")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m44ft"]
+atlas = ExtResource("2_wo26x")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2jdux"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nyola")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m44ft")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="conveyor" type="StaticBody2D"]
+script = ExtResource("1_wo26x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_m44ft")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_2jdux")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2jdux")
+autoplay = "default"
+frame_progress = 0.393524
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

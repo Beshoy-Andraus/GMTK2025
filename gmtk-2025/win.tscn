@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ctty5vlc3ig4o"]
+
+[ext_resource type="Script" uid="uid://co4fmkk4css81" path="res://win.gd" id="1_yblwc"]
+[ext_resource type="Texture2D" uid="uid://e0du5dr71fww" path="res://Untitled_Artwork.png" id="2_u4bre"]
+[ext_resource type="FontFile" uid="uid://xwy7rlg2j3f4" path="res://CustomHandwritten-Regular.ttf" id="3_4x0fk"]
+
+[node name="Win" type="Node2D" unique_id=603745134]
+script = ExtResource("1_yblwc")
+
+[node name="UntitledArtwork" type="Sprite2D" parent="." unique_id=138160657]
+position = Vector2(5, -62)
+scale = Vector2(0.535069, 0.554552)
+texture = ExtResource("2_u4bre")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1194809529]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=71810377]
+offset_left = -341.0
+offset_top = -419.0
+offset_right = 384.0
+offset_bottom = 206.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("3_4x0fk")
+theme_override_font_sizes/normal_font_size = 200
+text = "YOU WIN"
+horizontal_alignment = 1
+vertical_alignment = 1

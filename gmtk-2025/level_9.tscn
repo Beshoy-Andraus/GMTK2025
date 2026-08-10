@@ -1,0 +1,322 @@
+[gd_scene load_steps=11 format=3 uid="uid://b4n0cjr24iofd"]
+
+[ext_resource type="Script" uid="uid://bvfm02u5se58h" path="res://level_9.gd" id="1_4y126"]
+[ext_resource type="PackedScene" uid="uid://b7dv1lt3w3dpm" path="res://tile_map_glow.tscn" id="2_7i33c"]
+[ext_resource type="Texture2D" uid="uid://b55qhsw6xqubd" path="res://Screenshot 2025-08-01 190044.png" id="2_w5e11"]
+[ext_resource type="PackedScene" uid="uid://crgctx28ocx2" path="res://tile_map.tscn" id="3_xx8ku"]
+[ext_resource type="PackedScene" uid="uid://c2cyjo1kgubph" path="res://enemy.tscn" id="4_a721k"]
+[ext_resource type="PackedScene" uid="uid://cenbf0jmp3xxl" path="res://door.tscn" id="5_a721k"]
+[ext_resource type="PackedScene" uid="uid://c11wcg6v0j78l" path="res://key.tscn" id="6_7amt0"]
+[ext_resource type="PackedScene" uid="uid://baubncy5lxxs0" path="res://flag.tscn" id="7_w5e11"]
+[ext_resource type="PackedScene" uid="uid://bq6e2r8evkpjq" path="res://level_10n.tscn" id="9_aie2w"]
+[ext_resource type="PackedScene" uid="uid://dx4vsde7hjy42" path="res://clock.tscn" id="9_e3b7f"]
+
+[node name="level_9" type="Node2D"]
+script = ExtResource("1_4y126")
+
+[node name="Screenshot2025-08-01190044" type="Sprite2D" parent="."]
+modulate = Color(0.625597, 0.625597, 0.625597, 1)
+position = Vector2(-32, -35)
+scale = Vector2(0.477839, 0.465205)
+texture = ExtResource("2_w5e11")
+
+[node name="TileMap_glow" parent="." instance=ExtResource("2_7i33c")]
+layer_0/tile_data = PackedInt32Array(-65543, 327680, 0, -65542, 327680, 0, -65541, 327680, 0, -65540, 327680, 0, -65539, 327680, 0, -65538, 327680, 0, -65537, 327680, 0, -131072, 327680, 0, -131071, 327680, 0, -131070, 327680, 0, -131069, 327680, 0, -131068, 327680, 0, -131067, 327680, 0, -327676, 327680, 0, -262140, 327680, 0, -196604, 327680, 0, -65532, 327680, 0, 4, 327680, 0, 65540, 327680, 0, 131076, 327680, 0, -196613, 327680, 0, -131077, 327680, 0, -5, 327680, 0, -196612, 327680, 0, -131076, 327680, 0, -4, 327680, 0, -196611, 327680, 0, -131075, 327680, 0, -3, 327680, 0, -196610, 327680, 0, -131074, 327680, 0, -2, 327680, 0, -196609, 327680, 0, -131073, 327680, 0, -1, 327680, 0, -262144, 327680, 0, -196608, 327680, 0, -65536, 327680, 0, -262143, 327680, 0, -196607, 327680, 0, -65535, 327680, 0, -262142, 327680, 0, -196606, 327680, 0, -65534, 327680, 0, -262141, 327680, 0, -196605, 327680, 0, -65533, 327680, 0, 65532, 327680, 0, 131068, 327680, 0, 65533, 327680, 0, 131069, 327680, 0, 65534, 327680, 0, 131070, 327680, 0, 65535, 327680, 0, 131071, 327680, 0, 0, 327680, 0, 65536, 327680, 0, 1, 327680, 0, 65537, 327680, 0, 2, 327680, 0, 65538, 327680, 0, 3, 327680, 0, 65539, 327680, 0, 131073, 327680, 0, 196609, 327680, 0, 131074, 327680, 0, 196610, 327680, 0, 196607, 327680, 0, 196604, 327680, 0, 196605, 327680, 0, 262140, 327680, 0, -393220, 327680, 0, -327684, 327680, 0, -262148, 327680, 0, -327683, 327680, 0, -262147, 327680, 0, -393215, 327680, 0, -327679, 327680, 0, -393214, 327680, 0, -327678, 327680, 0, -262145, 327680, 0)
+
+[node name="TileMap" parent="." instance=ExtResource("3_xx8ku")]
+layer_0/tile_data = PackedInt32Array(-1, 262144, 0, 65535, 262144, 0, -65536, 65536, 0, 0, 262144, 0, -65538, 65536, 0, -2, 262144, 0, 65534, 262144, 0, 131070, 262144, 0, -65537, 262144, 0, 131071, 262144, 0, -131072, 262144, 0, 65536, 131072, 0, -131071, 262144, 0, -65535, 262144, 0, 1, 262144, 0, 65537, 262144, 0, -65539, 262144, 0, -3, 262144, 0, 65533, 262144, 0, 131069, 262144, 0, -131070, 262144, 0, -65534, 262144, 0, 2, 262144, 0, 65538, 262144, 0, -131076, 262144, 0, -65540, 262144, 0, -4, 262144, 0, 65532, 262144, 0, 131068, 262144, 0, -131075, 262144, 0, -131074, 262144, 0, -131073, 262144, 0, -196608, 262144, 0, -196607, 262144, 0, -196606, 262144, 0, -196605, 262144, 0, -131069, 65536, 0, -65533, 131072, 0, 3, 262144, 0, 65539, 262144, 0, -196613, 262144, 0, -131077, 262144, 0, -65541, 262144, 0, -5, 262144, 0, -196612, 262144, 0, -196611, 262144, 0, -196610, 262144, 0, -196609, 262144, 0, -262144, 131072, 0, -262143, 262144, 0, -262142, 262144, 0, -262141, 262144, 0, -262140, 262144, 0, -196604, 262144, 0, -131068, 262144, 0, -65532, 262144, 0, 4, 262144, 0, 65540, 262144, 0, -65543, 262144, 0, -65542, 262144, 0, -131067, 262144, 0, 196604, 262144, 0, 262140, 262144, 0, 196605, 131072, 0, 196607, 0, 0, 131073, 262144, 0, 131074, 262144, 0, -262148, 262144, 0, -327684, 262144, 0, -393220, 262144, 0, -262147, 262144, 0, -327683, 196608, 0, 196609, 262144, 0, 196610, 262144, 0, -262145, 196608, 0, -393215, 262144, 0, -327679, 262144, 0, -393214, 196608, 0, -327678, 262144, 0, -327676, 262144, 0, 131076, 262144, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-18, -47)
+zoom = Vector2(1.8, 1.8)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-154, -41)
+
+[node name="enemy" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(-21, -140)
+right = false
+down = true
+moves = 2
+max_tick = 2
+
+[node name="enemy2" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(-121, -44)
+right = false
+down = true
+moves = 3
+max_tick = 2
+
+[node name="enemy3" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(-119, -11)
+right = false
+down = true
+moves = 3
+max_tick = 2
+
+[node name="enemy4" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(-120, -138)
+right = false
+down = true
+moves = 3
+max_tick = 2
+
+[node name="enemy5" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(-117, 22)
+right = false
+down = true
+moves = 3
+max_tick = 2
+
+[node name="enemy6" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(-84, 20)
+right = false
+down = true
+moves = 2
+max_tick = 2
+
+[node name="enemy7" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(-118, -196)
+right = false
+down = true
+moves = 3
+max_tick = 2
+
+[node name="enemy8" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(-119, -169)
+right = false
+down = true
+moves = 3
+max_tick = 2
+
+[node name="enemy9" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(-53, -105)
+right = false
+down = true
+moves = 1
+max_tick = 2
+
+[node name="enemy10" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(-50, 20)
+right = false
+down = true
+moves = 1
+max_tick = 2
+
+[node name="enemy11" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(-85, -138)
+right = false
+down = true
+moves = 2
+max_tick = 2
+
+[node name="enemy12" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(-85, -169)
+right = false
+down = true
+moves = 2
+max_tick = 2
+
+[node name="enemy13" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(-87, -107)
+right = false
+down = true
+moves = 2
+max_tick = 2
+
+[node name="enemy14" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(-86, -73)
+right = false
+down = true
+moves = 2
+max_tick = 2
+
+[node name="enemy15" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(-56, -13)
+right = false
+down = true
+moves = 1
+max_tick = 2
+
+[node name="enemy16" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(-22, -11)
+right = false
+down = true
+moves = 2
+max_tick = 2
+
+[node name="enemy17" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(-21, 20)
+right = false
+down = true
+moves = 2
+max_tick = 2
+
+[node name="enemy18" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(-21, -46)
+right = false
+down = true
+moves = 2
+max_tick = 2
+
+[node name="enemy19" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(44, -134)
+right = false
+down = true
+moves = 3
+max_tick = 2
+
+[node name="enemy20" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(11, -75)
+right = false
+down = true
+moves = 1
+max_tick = 2
+
+[node name="enemy21" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(11, -110)
+right = false
+down = true
+moves = 1
+max_tick = 2
+
+[node name="enemy22" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(13, 22)
+right = false
+down = true
+moves = 1
+max_tick = 2
+
+[node name="enemy23" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(41, 23)
+right = false
+down = true
+moves = 3
+max_tick = 2
+
+[node name="enemy24" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(43, -12)
+right = false
+down = true
+moves = 3
+max_tick = 2
+
+[node name="enemy25" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(42, -44)
+right = false
+down = true
+moves = 3
+max_tick = 2
+
+[node name="enemy26" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(75, 22)
+right = false
+down = true
+moves = 3
+max_tick = 2
+
+[node name="enemy27" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(44, -168)
+right = false
+down = true
+moves = 3
+max_tick = 2
+
+[node name="enemy28" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(73, -13)
+right = false
+down = true
+moves = 3
+max_tick = 2
+
+[node name="enemy29" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(72, -105)
+right = false
+down = true
+moves = 3
+max_tick = 2
+
+[node name="enemy30" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(73, -136)
+right = false
+down = true
+moves = 3
+max_tick = 2
+
+[node name="enemy31" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(74, -167)
+right = false
+down = true
+moves = 3
+max_tick = 2
+
+[node name="enemy32" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(105, -107)
+right = false
+down = true
+moves = 1
+max_tick = 2
+
+[node name="enemy33" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(104, -10)
+right = false
+down = true
+moves = 1
+max_tick = 2
+
+[node name="enemy34" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(105, 23)
+right = false
+down = true
+moves = 1
+max_tick = 2
+
+[node name="enemy35" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(139, 24)
+right = false
+down = true
+moves = 2
+max_tick = 2
+
+[node name="enemy36" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(137, -8)
+right = false
+down = true
+moves = 2
+max_tick = 2
+
+[node name="enemy37" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(137, -44)
+right = false
+down = true
+moves = 2
+max_tick = 2
+
+[node name="enemy38" parent="." instance=ExtResource("4_a721k")]
+position = Vector2(138, -138)
+right = false
+down = true
+moves = 2
+max_tick = 2
+
+[node name="door" parent="." instance=ExtResource("5_a721k")]
+position = Vector2(-181, -44)
+
+[node name="key" parent="." instance=ExtResource("6_7amt0")]
+position = Vector2(172, -45)
+door = NodePath("../door")
+
+[node name="flag" parent="." instance=ExtResource("7_w5e11")]
+position = Vector2(-219, -40)
+next_level = ExtResource("9_aie2w")
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("9_e3b7f")]
+position = Vector2(234, -131)
+scale = Vector2(4, 4)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -317.0
+offset_top = 31.0
+offset_right = -152.0
+offset_bottom = 71.0
+text = "Level 9 it IS possible"
