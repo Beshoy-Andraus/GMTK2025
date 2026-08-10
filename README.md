@@ -9,7 +9,7 @@ W/A/S/D or Arrow keys to move
 
 R or Backspace to restart the level
 
-(Currently, the only way to go back to the main menu is to make it past the last level or reload your page. There was a pause menu, but that broke last minute, so I had to remove it.)
+(Currently, the only way to go back to the main menu is to complete the last level or reload the page.) There was a pause menu, but that broke last minute, so I had to remove it.)
 
 All levels are unlocked from the get-go, so if you get stuck on a level, you are more than welcome to reload your page, launch the game, and just skip it.
 
@@ -19,4 +19,9 @@ Message from the dev:
 
 This was my first-ever game jam; all code and sprites were created by me.
 
-This project placed #1856/9519 for Enjoyment with a score of 3.429 #3519/9519 for Audio with a score of 2.857 #4619/9519 for Creativity with a score of 3.095 #4887/9519 for Narrative with a score of 2.143 #4915/9519 for Artwork with a score of 2.762
+This project placed 
+#1856/9519 for Enjoyment with a score of 3.429 
+#3519/9519 for Audio with a score of 2.857 
+#4619/9519 for Creativity with a score of 3.095 
+#4887/9519 for Narrative with a score of 2.143 
+#4915/9519 for Artwork with a score of 2.762
