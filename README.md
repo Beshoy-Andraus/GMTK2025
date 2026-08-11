@@ -25,3 +25,5 @@ This project placed
 #4619/9519 for Creativity with a score of 3.095 
 #4887/9519 for Narrative with a score of 2.143 
 #4915/9519 for Artwork with a score of 2.762
+
+https://itch.io/jam/gmtk-2025/rate/3773330
